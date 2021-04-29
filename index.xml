@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>It&#39;s a Wonderful Life</title>
+    <link>http://wiryer.github.io/</link>
+    <description>Recent content on It&#39;s a Wonderful Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language><atom:link href="http://wiryer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CI/CD - 배포절차</title>
+      <link>http://wiryer.github.io/cicd/</link>
+      <pubDate>Thu, 29 Apr 2021 22:13:21 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/cicd/</guid>
+      <description>1. 프로젝트 생성 1.1 개발자 등록
+ Gitlab 시스템에 등록한다. 등록 방법은 SWA가 제시하는 방법에 따른다. 프로젝트에 대한 개발자 권한을 SWA 또는 Admin 으로부터 요청하여 받는다.   1.2 프로젝트 생성
+ 최초 프로젝트 생성은 SWA 등 maintainer 권한을 가진 사용자가 생성한다.    Figure-1. 프로젝트 생성     프로젝트를 생성 후, 최초 소스를 Master Origin에 PUSH 한다.  cd example git init git remote add origin http://gitlab.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://wiryer.github.io/about/</link>
+      <pubDate>Thu, 29 Apr 2021 22:02:13 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
