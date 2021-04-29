@@ -12,20 +12,20 @@
     <title>1. 학습 순서 :: It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1619711820" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1619711820" rel="stylesheet">
-    <link href="/css/hybrid.css?1619711820" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1619711820" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1619711820" rel="stylesheet">
-    <link href="/css/auto-complete.css?1619711820" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1619711820" rel="stylesheet">
-    <link href="/css/theme.css?1619711820" rel="stylesheet">
-    <link href="/css/tabs.css?1619711820" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1619711820" rel="stylesheet">
+    <link href="/css/nucleus.css?1619736519" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1619736519" rel="stylesheet">
+    <link href="/css/hybrid.css?1619736519" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1619736519" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1619736519" rel="stylesheet">
+    <link href="/css/auto-complete.css?1619736519" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1619736519" rel="stylesheet">
+    <link href="/css/theme.css?1619736519" rel="stylesheet">
+    <link href="/css/tabs.css?1619736519" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1619736519" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1619711820"></script>
+    <script src="/js/jquery-3.3.1.min.js?1619736519"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1619711820"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1619711820"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1619736519"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1619736519"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1619711820"></script>
+<script type="text/javascript" src="/js/search.js?1619736519"></script>
 
     
   </div>
@@ -176,16 +176,33 @@
 
 <p>CI/CD</p>
 <ol>
-<li>이미 우린 프로젝트에서의 CI/CD 의 의미는 모두가 이미 숙지하고 있습니다.
+<li>인사
 <ul>
-<li>제가 몇 차례 Onpremise, Public Cloud에서 CI/CD 구축한 내용을 바탕으로 오늘 CI/CD 첫 학습 활동을 시작하겠습니다.</li>
-<li>경험을 안하신 분들은 다소 당황스러우실 수 있으실텐데, 저 역시도 그랬던거 같습니다. 몇차례 CI/CD 구축하면서, 열심히 구글링하고, 책도 좀 보면서 해왔던 거 같습니다.</li>
-<li>오늘 설명드릴 내용은 아무래도 가장 근래에 진행했던, LG U+ 홈플렛폼에서 CI/CD 구성 경험을 바탕으로 설명드리겠습니다.</li>
-<li>진행중에 맞지 않는 부분이 있으면, 언제든 말씀해주시기 바랍니다.</li>
+<li>안녕하세요. 퇴근 해야 할 시간인데, 프로젝트 여건이 맞지 않아서 이렇게 퇴근 후에 진행하게 되었습니다.</li>
+<li>최대한 빠르게 끝내보도록 하겠습니다. 혹시 너무 말이 너무 빠르면 알려주시기 바랍니다.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<p>제가 몇 차례 Onpremise, Public Cloud에서 CI/CD 구축한 내용을 바탕으로 오늘 CI/CD 첫 학습 활동을 시작하겠습니다.</p>
+</li>
+<li>
+<p>?? 이 학습 과정을 계획한 목적은 CI/CD 구축 경험이 없던 분들에게 현장에서의 어떤 절차로 진행되고, 어떤 이슈들이 있는 지를 현장경험을 공유해드리는 시간으로 전 이해하고 있습니다.</p>
+</li>
+<li>
+<p>저 역시도 몇차례 CI/CD 구축하면서, 열심히 구글링하고, 책도 좀 보면서 해왔던 거 같습니다.</p>
+</li>
+<li>
+<p>오늘 제가 진행할 내용은 가장 근래에, &ldquo;LG U+ 홈플렛폼&quot;에서 CI/CD 구축 경험을 바탕으로 설명드리겠습니다.</p>
+</li>
+<li>
+<p>진행중에 맞지 않는 부분이 있으면, 언제든 말씀해주시기 바랍니다.</p>
+</li>
 </ul>
 </li>
 </ol>
-<p>DevOps :문화
+<p>DevOps : 새로운 개발환경 문화
 Agile 방법론이라는 프로세스(Delivery)
 CI/CD :자동화 도구를 이용해서</p>
 <ol>
@@ -193,7 +210,7 @@ CI/CD :자동화 도구를 이용해서</p>
 <p>도구 선정</p>
 <ul>
 <li>프로젝트에서 CI/CD 구축 업무를 맞게되면, 소스 형상관리를 위한 솔루션과 CI/CD 를 위한 도구를 선정하게 되는데, 최근에 형상관리 툴은 Git 기반의 Gitlab과 BitBucket 등을 프로젝트에서 많이 사용하고 있는데, 최근에 제가 투입된 프로젝트에서는 대부분 Gitlab 을 설치형으로 이용하거나, 회사의 Bitbucket 기반의 Code를 사용하였습니다.</li>
-<li>CI/CD 도구로 Jenkins, Travis CI, circle-ci Bamboo, Gitlab-Runner 등이 있고, 최근에는 Bitbucket에도 pipeline이라는 CI/CD 를 제공하고 있습니다.</li>
+<li>CI/CD 도구로 Jenkins, Travis CI, circle-ci, Bamboo, Gitlab-Runner 등이 있고, 최근에는 Bitbucket에도 pipeline이라는 CI/CD 를 제공하고 있습니다.</li>
 <li>저의 경우는 Gitlab을 사용하면 Gitlab-Runner를 추천하는 편입니다.</li>
 <li>여러 이유가 있지만, 호스트를 사용함으로써 두개의 툴을 쓰지 않아도 되면서, 동일한 UI 에서 해결할 수 있습니다., Jenkins 의 플러그인 설정의 어려움, 코드리뷰 프로세스 제공등이 있습니다.</li>
 </ul>
@@ -250,19 +267,19 @@ CI/CD :자동화 도구를 이용해서</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1619711820"></script>
-    <script src="/js/perfect-scrollbar.min.js?1619711820"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1619711820"></script>
-    <script src="/js/jquery.sticky.js?1619711820"></script>
-    <script src="/js/featherlight.min.js?1619711820"></script>
-    <script src="/js/highlight.pack.js?1619711820"></script>
+    <script src="/js/clipboard.min.js?1619736519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1619736519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1619736519"></script>
+    <script src="/js/jquery.sticky.js?1619736519"></script>
+    <script src="/js/featherlight.min.js?1619736519"></script>
+    <script src="/js/highlight.pack.js?1619736519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1619711820"></script>
-    <script src="/js/learn.js?1619711820"></script>
-    <script src="/js/hugo-learn.js?1619711820"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1619736519"></script>
+    <script src="/js/learn.js?1619736519"></script>
+    <script src="/js/hugo-learn.js?1619736519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1619711820"></script>
+            <script src="/mermaid/mermaid.js?1619736519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
