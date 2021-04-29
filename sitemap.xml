@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://wiryer.github.io/study/</loc>
+    <lastmod>2021-04-29T23:27:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://wiryer.github.io/cicd/</loc>
     <lastmod>2021-04-29T22:13:21+09:00</lastmod>
   </url>

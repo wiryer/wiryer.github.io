@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language><atom:link href="http://wiryer.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>1. 학습 순서</title>
+      <link>http://wiryer.github.io/study/</link>
+      <pubDate>Thu, 29 Apr 2021 23:27:29 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/study/</guid>
+      <description>CI/CD
+ 이미 우린 프로젝트에서의 CI/CD 의 의미는 모두가 이미 숙지하고 있습니다.  제가 몇 차례 Onpremise, Public Cloud에서 CI/CD 구축한 내용을 바탕으로 오늘 CI/CD 첫 학습 활동을 시작하겠습니다. 경험을 안하신 분들은 다소 당황스러우실 수 있으실텐데, 저 역시도 그랬던거 같습니다. 몇차례 CI/CD 구축하면서, 열심히 구글링하고, 책도 좀 보면서 해왔던 거 같습니다. 오늘 설명드릴 내용은 아무래도 가장 근래에 진행했던, LG U+ 홈플렛폼에서 CI/CD 구성 경험을 바탕으로 설명드리겠습니다. 진행중에 맞지 않는 부분이 있으면, 언제든 말씀해주시기 바랍니다.</description>
+    </item>
+    
+    <item>
       <title>2. 배포절차</title>
       <link>http://wiryer.github.io/cicd/</link>
       <pubDate>Thu, 29 Apr 2021 22:13:21 +0900</pubDate>
