@@ -14,10 +14,10 @@
       <guid>http://wiryer.github.io/study/</guid>
       <description>CI/CD
    저는 Onpremise 환경과, Public Cloud에서 몇차례 CI/CD 구축한 경험이 있고, 덕분에 CI/CD 학습을 리딩할 기회를 주셨네요. ㅠㅠ
-  CI/CD를 하면 할수록 그 깊이도 끝이 없지만, 그걸 다 알필요는 없겠죠.
   이 학습의 목적을 CI/CD 구축 경험이 없는 분들에게 현장에서의 어떤 절차로 진행되고, 어떤 이슈들이 있는 지를
   현장경험을 공유하는 시간으로 전 이해하고 있습니다.
-  오늘 제가 진행할 내용은 가장 근래에, &amp;ldquo;LG U+ 홈플렛폼&amp;rdquo; 프로젝트에서 CI/CD 구축한 경험을 설명 하겠습니다.</description>
+  오늘 제가 진행할 내용은 가장 근래에, &amp;ldquo;LG U+ 홈플렛폼&amp;rdquo; 프로젝트에서 CI/CD 구축한 경험을 설명 하겠습니다.
+  진행중에 질문이 있으면, 언제든 말씀해주시기 바랍니다.</description>
     </item>
     
     <item>

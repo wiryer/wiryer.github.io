@@ -12,20 +12,20 @@
     <title>1. 학습 순서 :: It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620016402" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620016402" rel="stylesheet">
-    <link href="/css/hybrid.css?1620016402" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620016402" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620016402" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620016402" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620016402" rel="stylesheet">
-    <link href="/css/theme.css?1620016402" rel="stylesheet">
-    <link href="/css/tabs.css?1620016402" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620016402" rel="stylesheet">
+    <link href="/css/nucleus.css?1620031587" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620031587" rel="stylesheet">
+    <link href="/css/hybrid.css?1620031587" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620031587" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620031587" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620031587" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620031587" rel="stylesheet">
+    <link href="/css/theme.css?1620031587" rel="stylesheet">
+    <link href="/css/tabs.css?1620031587" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620031587" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620016402"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620031587"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620016402"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620016402"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620031587"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620031587"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620016402"></script>
+<script type="text/javascript" src="/js/search.js?1620031587"></script>
 
     
   </div>
@@ -182,9 +182,6 @@
 <p>저는 Onpremise 환경과, Public Cloud에서 몇차례 CI/CD 구축한 경험이 있고, 덕분에 CI/CD 학습을 리딩할 기회를 주셨네요. ㅠㅠ</p>
 </li>
 <li>
-<p>CI/CD를 하면 할수록 그 깊이도 끝이 없지만, 그걸 다 알필요는 없겠죠.</p>
-</li>
-<li>
 <p>이 학습의 목적을 CI/CD 구축 경험이 없는 분들에게 현장에서의 어떤 절차로 진행되고, 어떤 이슈들이 있는 지를</p>
 </li>
 <li>
@@ -196,10 +193,15 @@
 <li>
 <p>진행중에 질문이 있으면, 언제든 말씀해주시기 바랍니다.</p>
 </li>
+<li>
+<p>CI/CD 도구 선정, 설치와 연동, 프로젝트 생성과 테스트, 그외 이슈의 순으로 진행할텐데, Gitlab 사이트에 시스템별 설치방법이 자세히 나와 있으니(<a href="https://about.gitlab.com/install/),">https://about.gitlab.com/install/),</a> 설치/연동 부분의 간략하게만 짚고 넘어가겠습니다.</p>
+</li>
+<li>
+<p>DevOps, Agile, CI/CD 등 더이상 설명이 우리에겐 필요없으니, 곧바로 도구선정의 이유입니다.</p>
+</li>
 </ul>
 </li>
 </ol>
-<p>CI/CD 도구 선정, 설치와 연동, 프로젝트 생성/관리, 그외 이슈의 순으로 진행하겠습니다.</p>
 <p>DevOps : 새로운 개발환경 문화
 Agile 방법론이라는 프로세스(Delivery)
 CI/CD :자동화 도구를 이용해서</p>
@@ -207,7 +209,9 @@ CI/CD :자동화 도구를 이용해서</p>
 <li>
 <p>도구 선정</p>
 <ul>
-<li>프로젝트에서 CI/CD 구축 업무를 맞게되면, 소스 형상관리를 위한 솔루션과 CI/CD 를 위한 도구를 선정하게 되는데, 최근에 형상관리 툴은 Git 기반의 Gitlab과 BitBucket 등을 프로젝트에서 많이 사용하고 있는데, 최근에 제가 투입된 프로젝트에서는 대부분 Gitlab 을 설치형으로 이용하거나, 회사의 Bitbucket 기반의 Code를 사용하였습니다.</li>
+<li>프로젝트에 투입됐고, CI/CD 구축 업무를 맡습니다.</li>
+<li>소스 형상관리를 위한 솔루션과 CI/CD 를 위한 도구를 선정해야 되는데,</li>
+<li>최근에는 거의 Git 기반의 Gitlab과 BitBucket 등을 프로젝트에서 많이 사용하고 있는데, 최근에 제가 투입된 프로젝트에서는 대부분 Gitlab 을 설치형으로 이용하거나, 회사의 Bitbucket 기반의 Code를 사용하였습니다.</li>
 <li>CI/CD 도구로 Jenkins, Travis CI, circle-ci, Bamboo, Gitlab-Runner 등이 있고, 최근에는 Bitbucket에도 pipeline이라는 CI/CD 를 제공하고 있습니다.</li>
 <li>저의 경우는 Gitlab을 사용하면 Gitlab-Runner를 추천하는 편입니다.</li>
 <li>여러 이유가 있지만, 호스트를 사용함으로써 두개의 툴을 쓰지 않아도 되면서, 동일한 UI 에서 해결할 수 있습니다., Jenkins 의 플러그인 설정의 어려움, 코드리뷰 프로세스 제공등이 있습니다.</li>
@@ -265,19 +269,19 @@ CI/CD :자동화 도구를 이용해서</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620016402"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620016402"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620016402"></script>
-    <script src="/js/jquery.sticky.js?1620016402"></script>
-    <script src="/js/featherlight.min.js?1620016402"></script>
-    <script src="/js/highlight.pack.js?1620016402"></script>
+    <script src="/js/clipboard.min.js?1620031587"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620031587"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620031587"></script>
+    <script src="/js/jquery.sticky.js?1620031587"></script>
+    <script src="/js/featherlight.min.js?1620031587"></script>
+    <script src="/js/highlight.pack.js?1620031587"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620016402"></script>
-    <script src="/js/learn.js?1620016402"></script>
-    <script src="/js/hugo-learn.js?1620016402"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620031587"></script>
+    <script src="/js/learn.js?1620031587"></script>
+    <script src="/js/hugo-learn.js?1620031587"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620016402"></script>
+            <script src="/mermaid/mermaid.js?1620031587"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
