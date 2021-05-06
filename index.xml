@@ -61,7 +61,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://wiryer.github.io/cicddoc/</guid>
-      <description>목차  솔루션 선정 Gitlab 설치 Gitlab-Runner 연동 프로젝트 추가    1. 솔루션 선정  형상관리서버  Gitlab 선정: Git 기반의 자체구축관리의 무료 버전  CI 도구선정   Gitlab-Runner선정의 이유(Jenkins를 선정하지 않은 이유)
+      <description>목차  솔루션 선정 Gitlab 설치 Gitlab Runner 연동 프로젝트 추가    1. 솔루션 선정  형상관리서버  Gitlab 선정: Git 기반의 자체구축관리의 무료 버전  CI 도구선정   Gitlab-Runner선정의 이유(Jenkins를 선정하지 않은 이유)
 A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시성이 높음
  전체 개발 단계에서 일관된 UI제공 여러 어플리케이션 로그인 사용불편제거 설치 및 백업 등 유지관리가 용이함.\  B. Plugin 등이 전혀 필요없음
  Jenkins의 Plugin 충돌 경험  C.</description>
