@@ -38,5 +38,14 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
  Jenkins의 Plugin 충돌 경험  C.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://wiryer.github.io/cicd_learn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiryer.github.io/cicd_learn/</guid>
+      <description>사전작업  [Local 작업]  Local 도구 설치   Terraform 0.14.8 Kubectl 1.19 이상 awscli 2.0 이상 eksctl 0.42.0 git, jq 최신버전.  AWS 계정 (ex. Cloud Innovation팀에서 제공하는 AWS 교육 계정)   AWS console에서 오른쪽 본인 계정명 클릭 &amp;raquo; My Security Credentials 클릭 화면 중앙의 &amp;ldquo;Access keys(access key ID and secret access key)&amp;rdquo; 메뉴 선택 Create New Access Key 로 클릭 후 Access Key ID 와 Secret Access Key를 로컬에 저장 자격증명 (~/.</description>
+    </item>
+    
   </channel>
 </rss>
