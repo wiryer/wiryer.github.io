@@ -12,20 +12,20 @@
     <title> :: It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620306931" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620306931" rel="stylesheet">
-    <link href="/css/hybrid.css?1620306931" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620306931" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620306931" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620306931" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620306931" rel="stylesheet">
-    <link href="/css/theme.css?1620306931" rel="stylesheet">
-    <link href="/css/tabs.css?1620306931" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620306931" rel="stylesheet">
+    <link href="/css/nucleus.css?1620307763" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620307763" rel="stylesheet">
+    <link href="/css/hybrid.css?1620307763" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620307763" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620307763" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620307763" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620307763" rel="stylesheet">
+    <link href="/css/theme.css?1620307763" rel="stylesheet">
+    <link href="/css/tabs.css?1620307763" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620307763" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620306931"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620307763"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620306931"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620306931"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620307763"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620307763"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620306931"></script>
+<script type="text/javascript" src="/js/search.js?1620307763"></script>
 
     
   </div>
@@ -153,21 +153,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#목차">목차</a></li>
-    <li><a href="#1-솔루션선정">1. 솔루션선정</a>
+    <li>
       <ul>
-        <li><a href="#형상관리서버">형상관리서버</a></li>
-        <li><a href="#ci-도구선정">CI 도구선정</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-gitlab-설치">2. Gitlab 설치</a>
-      <ul>
-        <li><a href="#구성요소">구성요소</a></li>
-        <li><a href="#cicd-구성도">CI/CD 구성도</a></li>
-        <li><a href="#gitlab-설치">Gitlab 설치</a></li>
-        <li><a href="#232gitlab-데이터-볼륨-설정">2.3.2	Gitlab 데이터 볼륨 설정</a></li>
-        <li><a href="#24gitlab-runner-설치">2.4	Gitlab-Runner 설치</a></li>
-        <li><a href="#25프로젝트-추가sample-test">2.5	프로젝트 추가(Sample Test)</a></li>
+        <li><a href="#목차">목차</a></li>
+        <li><a href="#1-솔루션선정">1. 솔루션선정</a></li>
+        <li><a href="#2-gitlab-설치">2. Gitlab 설치</a></li>
+        <li><a href="#3gitlab-runner-설치">3.	Gitlab-Runner 설치</a></li>
+        <li><a href="#4프로젝트-추가sample-test">4.	프로젝트 추가(Sample Test)</a></li>
       </ul>
     </li>
   </ul>
@@ -194,21 +186,23 @@
         
 
 
-<h2 id="목차">목차</h2>
+<h3 id="목차">목차</h3>
 <ol>
 <li><a href="#1%EC%9E%A5.-%EC%86%94%EB%A3%A8%EC%85%98-%EC%84%A0%EC%A0%95">솔루션선정</a></li>
-<li>[Gitlab 설치]</li>
-<li>[Gitlab-Runner 연동]</li>
+<li><a href="#2%EC%9E%A5.-Gitlab-%EC%84%A4%EC%B9%98">Gitlab 설치</a></li>
+<li><a href="#3%EC%9E%A5.-Gitlab-Runner-%EC%97%B0%EB%8F%99">Gitlab-Runner 연동</a></li>
+<li><a href="#4%EC%9E%A5.-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B6%94%EA%B0%80">프로젝트 추가</a></li>
 </ol>
+<!-- raw HTML omitted -->
 <hr>
 <blockquote>
-<h2 id="1-솔루션선정">1. 솔루션선정</h2>
+<h3 id="1-솔루션선정">1. 솔루션선정</h3>
 </blockquote>
-<h3 id="형상관리서버">형상관리서버</h3>
+<h4 id="형상관리서버">형상관리서버</h4>
 <ul>
 <li>Gitlab 선정: Git 기반의 자체구축관리의 무료 버전</li>
 </ul>
-<h3 id="ci-도구선정">CI 도구선정</h3>
+<h4 id="ci-도구선가">CI 도구선가</h4>
 <ol>
 <li>
 <p>Gitlab-Runner선정의 이유(Jenkins를 선정하지 않은 이유)<br>
@@ -230,9 +224,9 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 </ul>
 <hr>
 <blockquote>
-<h2 id="2-gitlab-설치">2. Gitlab 설치</h2>
+<h3 id="2-gitlab-설치">2. Gitlab 설치</h3>
 </blockquote>
-<h3 id="구성요소">구성요소</h3>
+<h4 id="구성요소">구성요소</h4>
 <table>
 <thead>
 <tr>
@@ -293,13 +287,18 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 <td>프로젝트 빌드 이미지를 환경별 저장</td>
 </tr>
 <tr>
-<td>[Table caption, 1-1. CI 구성정보]</td>
+<td><figure><img src=""/><figcaption>
+            <h4>Table 1-1. CI 구성정보</h4>
+        </figcaption>
+</figure>
+</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="cicd-구성도">CI/CD 구성도</h3>
+<!-- raw HTML omitted -->
+<h4 id="cicd-구성도">CI/CD 구성도</h4>
 <figure><img src="/cicd/cicd_sturcture.png"
          alt="CI/CD 구성요소 개념도"/><figcaption>
             <h4>Figure 1-1. CI/CD 구성요소 개념도</h4>
@@ -310,7 +309,7 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 <li>CI/CD는 Shared 영역에 구성되어서, [개발, 스테이지, 운영환경]에 배포</li>
 <li>개발자PC에서 개발 환경을 구성하여 개발을 진행  개발된 변경 내용을 로컬 Reop에 Commit  Gitlab 서버에push  Gitlab 서버는 Gitlab-Runner를 이용하여 develop, stage/product 환경에서 Build  Docker 패키징 및 Deploy를 진행</li>
 </ul>
-<h3 id="gitlab-설치">Gitlab 설치</h3>
+<h4 id="gitlab-설치">Gitlab 설치</h4>
 <ul>
 <li>Omnibus / Installation 또는 Docker(Kubernetes) or Not
 <ul>
@@ -327,7 +326,7 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 </ul>
 </li>
 </ul>
-<h4 id="11설치omnibus-방식">1.1	설치(Omnibus 방식)</h4>
+<h5 id="11설치omnibus-방식">1.1	설치(Omnibus 방식)</h5>
 <ul>
 <li>Gitlab 패키지 레파지토리 등록</li>
 </ul>
@@ -349,7 +348,7 @@ $ sudo gitlab-ctl reconfigure
 </code></pre><ul>
 <li>Gitlab 서버 재 시작한다.</li>
 </ul>
-<h3 id="232gitlab-데이터-볼륨-설정">2.3.2	Gitlab 데이터 볼륨 설정</h3>
+<h4 id="12gitlab-데이터-볼륨-설정">1.2	Gitlab 데이터 볼륨 설정</h4>
 <p>시스템에 설치된 저장공간을 mount 된 /data001 disk 로 분리 작업을 진행한다.</p>
 <ul>
 <li>git data 저장소 변경</li>
@@ -389,12 +388,14 @@ $ sudo gitlab-ctl reconfigure
 최초 Password 설정 후 admin 계정인 root/[설정한 Password] 로 접속한다.</li>
 </ul>
 <!-- raw HTML omitted -->
-<h3 id="24gitlab-runner-설치">2.4	Gitlab-Runner 설치</h3>
+<blockquote>
+<h3 id="3gitlab-runner-설치">3.	Gitlab-Runner 설치</h3>
+</blockquote>
 <ul>
 <li>Gitlab 서버에 배포되는 소스를 빌드/배포하기 위한 파이프라인에 따라 Job을 실행</li>
 <li>Job의 실행 방식(Executor)는: Docker</li>
 </ul>
-<h4 id="241선행작업">2.4.1	선행작업</h4>
+<h5 id="31선행작업">3.1	선행작업</h5>
 <ul>
 <li>Docker 설치: Gitlab-Runner를 통해 Pipeline의 Job을 Docker을 이용해 실행하기 위해서 local환경에 Docker를 설치하고 설치된 Docker Daemon을 이용한다.</li>
 </ul>
@@ -405,7 +406,7 @@ $ sudo gitlab-ctl reconfigure
 [gitlab~]$ sudo service docker start # 서비스 시작
 [gitlab~]$ sudo systemctl enable docker # 서비스 등록, 시스템 시작 시 자동실행
 [gitlab~]$ sudo systemctl start docker
-</code></pre><h4 id="242gitlab-runner-설치-및-연동">2.4.2	Gitlab-Runner 설치 및 연동</h4>
+</code></pre><h5 id="32gitlab-runner-설치-및-연동">3.2	Gitlab-Runner 설치 및 연동</h5>
 <ul>
 <li>Gitlab-Runner 패키지 등록</li>
 </ul>
@@ -472,7 +473,7 @@ docker, aws
 <li>Gitlab Admin page의 Overview의 Runner 메뉴에서 등록된 Runner를 확인.(1~2분 걸림)</li>
 </ul>
 <!-- raw HTML omitted -->
-<h4 id="243gitlab-runner-추가-설정">2.4.3	Gitlab-Runner 추가 설정</h4>
+<h5 id="33gitlab-runner-추가-설정">3.3	Gitlab-Runner 추가 설정</h5>
 <p>Gitlab-Runner를 통한 프로젝트에  맞게 파이프라인 실행을 위한 추가 설정이 필요하다.</p>
 <ul>
 <li>
@@ -490,7 +491,7 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 /home/gitlab-runner/.m2 폴더 생성 후 .m2 폴더 아래 settings.xml 파일 생성</li>
 </ul>
 <!-- raw HTML omitted -->
-<h4 id="244-gitlab-변수-설정">2.4.4 Gitlab 변수 설정</h4>
+<h5 id="34-gitlab-변수-설정">3.4 Gitlab 변수 설정</h5>
 <ul>
 <li>
 <p>Gitlab은 정의된 변수들(Predefined Variables) 외에 반복 사용되는 값들을 변수 설정하여 스크립트를 간략하게 작성함.</p>
@@ -525,7 +526,9 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 </li>
 </ul>
 <!-- raw HTML omitted -->
-<h3 id="25프로젝트-추가sample-test">2.5	프로젝트 추가(Sample Test)</h3>
+<blockquote>
+<h3 id="4프로젝트-추가sample-test">4.	프로젝트 추가(Sample Test)</h3>
+</blockquote>
 <ul>
 <li>프로젝트에 대한 대상 소스 관리를 위한 서비스에 대한 프로젝트를 추가</li>
 <li>그룹생성 후 그룹 별 서비스에 대한 프로젝트를 생성하면 관리에 용이함</li>
@@ -583,19 +586,19 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620306931"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620306931"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620306931"></script>
-    <script src="/js/jquery.sticky.js?1620306931"></script>
-    <script src="/js/featherlight.min.js?1620306931"></script>
-    <script src="/js/highlight.pack.js?1620306931"></script>
+    <script src="/js/clipboard.min.js?1620307763"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620307763"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620307763"></script>
+    <script src="/js/jquery.sticky.js?1620307763"></script>
+    <script src="/js/featherlight.min.js?1620307763"></script>
+    <script src="/js/highlight.pack.js?1620307763"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620306931"></script>
-    <script src="/js/learn.js?1620306931"></script>
-    <script src="/js/hugo-learn.js?1620306931"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620307763"></script>
+    <script src="/js/learn.js?1620307763"></script>
+    <script src="/js/hugo-learn.js?1620307763"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620306931"></script>
+            <script src="/mermaid/mermaid.js?1620307763"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
