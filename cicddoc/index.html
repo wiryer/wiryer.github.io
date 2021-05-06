@@ -12,20 +12,20 @@
     <title> :: It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620312413" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620312413" rel="stylesheet">
-    <link href="/css/hybrid.css?1620312413" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620312413" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620312413" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620312413" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620312413" rel="stylesheet">
-    <link href="/css/theme.css?1620312413" rel="stylesheet">
-    <link href="/css/tabs.css?1620312413" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620312413" rel="stylesheet">
+    <link href="/css/nucleus.css?1620313061" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620313061" rel="stylesheet">
+    <link href="/css/hybrid.css?1620313061" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620313061" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620313061" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620313061" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620313061" rel="stylesheet">
+    <link href="/css/theme.css?1620313061" rel="stylesheet">
+    <link href="/css/tabs.css?1620313061" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620313061" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620312413"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620313061"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620312413"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620312413"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620313061"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620313061"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620312413"></script>
+<script type="text/javascript" src="/js/search.js?1620313061"></script>
 
     
   </div>
@@ -158,8 +158,8 @@
         <li><a href="#목차">목차</a></li>
         <li><a href="#1-솔루션-선정">1. 솔루션 선정</a></li>
         <li><a href="#2-gitlab-설치">2. Gitlab 설치</a></li>
-        <li><a href="#3gitlab-runner-연동">3.	Gitlab Runner 연동</a></li>
-        <li><a href="#4프로젝트-추가">4.	프로젝트 추가</a></li>
+        <li><a href="#3-gitlab-runner-연동">3. Gitlab-Runner 연동</a></li>
+        <li><a href="#4-프로젝트-추가sample-project">4. 프로젝트 추가(Sample Project)</a></li>
       </ul>
     </li>
   </ul>
@@ -188,10 +188,10 @@
 
 <h3 id="목차">목차</h3>
 <ol>
-<li><a href="#1-%EC%86%94%EB%A3%A8%EC%85%98-%EC%84%A0%EC%A0%95">솔루션 선정</a></li>
-<li><a href="#2-gitlab-%EC%84%A4%EC%B9%98">Gitlab 설치</a></li>
-<li><a href="#3-gitlab-runner-%EC%97%B0%EB%8F%99">Gitlab Runner 연동</a></li>
-<li><a href="#4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B6%94%EA%B0%80">프로젝트 추가</a></li>
+<li><a href="#1.-%EC%86%94%EB%A3%A8%EC%85%98-%EC%84%A0%EC%A0%95">솔루션 선정</a></li>
+<li><a href="#2.-gitlab-%EC%84%A4%EC%B9%98">Gitlab 설치</a></li>
+<li><a href="#3.-gitlab-runner-%EC%97%B0%EB%8F%99">Gitlab Runner 연동</a></li>
+<li><a href="#4.-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B6%94%EA%B0%80-(sample-project)">프로젝트 추가</a></li>
 </ol>
 <!-- raw HTML omitted -->
 <hr>
@@ -387,7 +387,7 @@ $ sudo gitlab-ctl reconfigure
 <!-- raw HTML omitted -->
 <hr>
 <blockquote>
-<h3 id="3gitlab-runner-연동">3.	Gitlab Runner 연동</h3>
+<h3 id="3-gitlab-runner-연동">3. Gitlab-Runner 연동</h3>
 </blockquote>
 <ul>
 <li>Gitlab 서버에 배포되는 소스를 빌드/배포하기 위한 파이프라인에 따라 Job을 실행</li>
@@ -404,7 +404,7 @@ $ sudo gitlab-ctl reconfigure
 [gitlab~]$ sudo service docker start # 서비스 시작
 [gitlab~]$ sudo systemctl enable docker # 서비스 등록, 시스템 시작 시 자동실행
 [gitlab~]$ sudo systemctl start docker
-</code></pre><h5 id="gitlab-runner-설치-및-연동">Gitlab Runner 설치 및 연동</h5>
+</code></pre><h5 id="gitlab-runner-설치-및-연동">Gitlab-Runner 설치 및 연동</h5>
 <ul>
 <li>Gitlab-Runner 패키지 등록</li>
 </ul>
@@ -526,7 +526,7 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 <!-- raw HTML omitted -->
 <hr>
 <blockquote>
-<h3 id="4프로젝트-추가">4.	프로젝트 추가</h3>
+<h3 id="4-프로젝트-추가sample-project">4. 프로젝트 추가(Sample Project)</h3>
 </blockquote>
 <ul>
 <li>프로젝트에 대한 대상 소스 관리를 위한 서비스에 대한 프로젝트를 추가</li>
@@ -534,7 +534,6 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 <li>그룹 생성 과 프로젝트 생성
 좌측 탭 메뉴에 그룹을 선택 후 생성할 수 있다.</li>
 </ul>
-<p>생성된 그룹내에 프로젝트를 생성한다.</p>
 
 
 <footer class="footline">
@@ -585,19 +584,19 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620312413"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620312413"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620312413"></script>
-    <script src="/js/jquery.sticky.js?1620312413"></script>
-    <script src="/js/featherlight.min.js?1620312413"></script>
-    <script src="/js/highlight.pack.js?1620312413"></script>
+    <script src="/js/clipboard.min.js?1620313061"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620313061"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620313061"></script>
+    <script src="/js/jquery.sticky.js?1620313061"></script>
+    <script src="/js/featherlight.min.js?1620313061"></script>
+    <script src="/js/highlight.pack.js?1620313061"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620312413"></script>
-    <script src="/js/learn.js?1620312413"></script>
-    <script src="/js/hugo-learn.js?1620312413"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620313061"></script>
+    <script src="/js/learn.js?1620313061"></script>
+    <script src="/js/hugo-learn.js?1620313061"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620312413"></script>
+            <script src="/mermaid/mermaid.js?1620313061"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
