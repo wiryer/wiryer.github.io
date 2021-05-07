@@ -12,20 +12,20 @@
     <title> :: It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620371502" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620371502" rel="stylesheet">
-    <link href="/css/hybrid.css?1620371502" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620371502" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620371502" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620371502" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620371502" rel="stylesheet">
-    <link href="/css/theme.css?1620371502" rel="stylesheet">
-    <link href="/css/tabs.css?1620371502" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620371502" rel="stylesheet">
+    <link href="/css/nucleus.css?1620372046" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620372046" rel="stylesheet">
+    <link href="/css/hybrid.css?1620372046" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620372046" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620372046" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620372046" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620372046" rel="stylesheet">
+    <link href="/css/theme.css?1620372046" rel="stylesheet">
+    <link href="/css/tabs.css?1620372046" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620372046" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620371502"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620372046"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620371502"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620371502"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620372046"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620372046"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620371502"></script>
+<script type="text/javascript" src="/js/search.js?1620372046"></script>
 
     
   </div>
@@ -386,18 +386,18 @@ $ sudo gitlab-ctl restart
 <li>Gitlab 서버에 배포되는 소스를 빌드/배포하기 위한 파이프라인 설정대로 Job을 실행</li>
 <li>Job의 실행 방식(Executor)는: Docker</li>
 </ul>
-<h5 id="선행작업">선행작업</h5>
-<ul>
-<li>Docker 설치: Gitlab-Runner를 통해 Pipeline의 Job을 Docker을 이용해 실행하기 위해서 local환경에 Docker를 설치하고 설치된 Docker Daemon을 이용한다.</li>
-</ul>
+<h4 id="선행작업">선행작업</h4>
 <ol>
 <li>Docker 설치</li>
 </ol>
+<ul>
+<li>Gitlab-Runner를 Pipeline의 Job을 Docker을 이용해 실행하기 위해서 local환경에 Docker를 설치하고 설치된 Docker Daemon을 공유.</li>
+</ul>
 <pre><code>[gitlab~]$ sudo yum install docker -y
 [gitlab~]$ sudo service docker start # 서비스 시작
 [gitlab~]$ sudo systemctl enable docker # 서비스 등록, 시스템 시작 시 자동실행
 [gitlab~]$ sudo systemctl start docker
-</code></pre><h5 id="gitlab-runner-설치-및-연동">Gitlab-Runner 설치 및 연동</h5>
+</code></pre><h4 id="gitlab-runner-설치-및-연동">Gitlab-Runner 설치 및 연동</h4>
 <ul>
 <li>Gitlab-Runner 패키지 등록</li>
 </ul>
@@ -464,7 +464,7 @@ docker, aws
 <li>Gitlab Admin page의 Overview의 Runner 메뉴에서 등록된 Runner를 확인.(1~2분 걸림)</li>
 </ul>
 <!-- raw HTML omitted -->
-<h5 id="gitlab-runner-추가-설정">Gitlab-Runner 추가 설정</h5>
+<h4 id="gitlab-runner-추가-설정">Gitlab-Runner 추가 설정</h4>
 <p>Gitlab-Runner를 통한 프로젝트에  맞게 파이프라인 실행을 위한 추가 설정이 필요하다.</p>
 <ul>
 <li>
@@ -482,7 +482,7 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 /home/gitlab-runner/.m2 폴더 생성 후 .m2 폴더 아래 settings.xml 파일 생성</li>
 </ul>
 <!-- raw HTML omitted -->
-<h5 id="gitlab-변수-설정">Gitlab 변수 설정</h5>
+<h4 id="gitlab-변수-설정">Gitlab 변수 설정</h4>
 <ul>
 <li>
 <p>Gitlab은 정의된 변수들(Predefined Variables) 외에 반복 사용되는 값들을 변수 설정하여 스크립트를 간략하게 작성함.</p>
@@ -577,19 +577,19 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620371502"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620371502"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620371502"></script>
-    <script src="/js/jquery.sticky.js?1620371502"></script>
-    <script src="/js/featherlight.min.js?1620371502"></script>
-    <script src="/js/highlight.pack.js?1620371502"></script>
+    <script src="/js/clipboard.min.js?1620372046"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620372046"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620372046"></script>
+    <script src="/js/jquery.sticky.js?1620372046"></script>
+    <script src="/js/featherlight.min.js?1620372046"></script>
+    <script src="/js/highlight.pack.js?1620372046"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620371502"></script>
-    <script src="/js/learn.js?1620371502"></script>
-    <script src="/js/hugo-learn.js?1620371502"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620372046"></script>
+    <script src="/js/learn.js?1620372046"></script>
+    <script src="/js/hugo-learn.js?1620372046"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620371502"></script>
+            <script src="/mermaid/mermaid.js?1620372046"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
