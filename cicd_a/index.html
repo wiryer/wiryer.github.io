@@ -12,20 +12,20 @@
     <title> :: It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620366320" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620366320" rel="stylesheet">
-    <link href="/css/hybrid.css?1620366320" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620366320" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620366320" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620366320" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620366320" rel="stylesheet">
-    <link href="/css/theme.css?1620366320" rel="stylesheet">
-    <link href="/css/tabs.css?1620366320" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620366320" rel="stylesheet">
+    <link href="/css/nucleus.css?1620369385" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620369385" rel="stylesheet">
+    <link href="/css/hybrid.css?1620369385" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620369385" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620369385" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620369385" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620369385" rel="stylesheet">
+    <link href="/css/theme.css?1620369385" rel="stylesheet">
+    <link href="/css/tabs.css?1620369385" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620369385" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620366320"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620369385"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620366320"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620366320"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620369385"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620369385"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620366320"></script>
+<script type="text/javascript" src="/js/search.js?1620369385"></script>
 
     
   </div>
@@ -227,7 +227,7 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 <blockquote>
 <h3 id="2-gitlab-설치">2. Gitlab 설치</h3>
 </blockquote>
-<h4 id="구성요소">구성요소</h4>
+<h4 id="구성요소-및-도구">구성요소 및 도구</h4>
 <table>
 <thead>
 <tr>
@@ -305,8 +305,8 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 <ul>
 <li>Omnibus / Installation 또는 Docker(Kubernetes) or Not
 <ul>
-<li>Omnibus 방식으로 VM에 설치(GitLab Self-Managed)</li>
-<li>볼륨 위치는 후에 수정 가능</li>
+<li>Omnibus 방식으로 VM에 설치(GitLab Self-Managed) 를 선택했음.</li>
+<li>볼륨 위치는 후에 수정 가능 : <strong>가장 좋은 방법은 생성 시 S3등을 제공받아 /var/opt/gitlab 경로를 링크 설정</strong></li>
 </ul>
 </li>
 <li>설치할 VM요청: VM 인스턴스 생성작업 및 그와 관련된 LoadBalancer, SecurityGroup 생성 등의 일련의 작업 진행을 통해 설치할 VM과 네크워크를 제공받음.</li>
@@ -328,20 +328,18 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 </ul>
 <pre><code>$ sudo EXTERNAL_URL=&quot;http://gitlab.dev.xxxxx.com&quot; yum install -y gitlab-ee 
 </code></pre><ul>
-<li>External_url 은 접속 URL 이므로 변경되지 않는 URL을 작성한다.(gitlab-runner 가 바라보는 url(ip) 이 주소로 clone을 통해서 소스를 내려받아 job을 진행)</li>
+<li>External_url 은 접속 URL 이므로 IP, URL이 변경시 수정한다.(gitlab-runner 가 바라보는 url(ip) 이 주소로 clone을 통해서 소스를 내려받아 job을 진행)</li>
 <li>Gitlab 환경설정: 설치 시에 EXTERNAL_URL 미 설정시 gitlab.rb 파일을 직접 수정가능</li>
 </ul>
 <pre><code>$ sudo vi /etc/gitlab/gitlab.rb
 $ sudo gitlab-ctl reconfigure
+$ sudo gitlab-ctl restart
 </code></pre><ul>
-<li>gitlab.rb 파일 수정 시 reconfigure 명령을 통해 반영</li>
-</ul>
-<pre><code>$ sudo gitlab-ctl restart
-</code></pre><ul>
-<li>Gitlab 서버 재 시작한다.</li>
+<li>gitlab.rb 파일 수정 시 reconfigure 명령을 통해 반영하고 재시작한다.</li>
 </ul>
 <h4 id="gitlab-데이터-볼륨-설정">Gitlab 데이터 볼륨 설정</h4>
-<p>시스템에 설치된 저장공간을 mount 된 /data001 disk 로 분리 작업을 진행한다.</p>
+<p><strong>가장 좋은 방법은 생성 시 S3등을 제공받아 /var/opt/gitlab 경로를 링크 설정</strong>
+시스템에 설치된 저장공간을 mount 된 /data001 disk 로 분리 작업을 진행한다.</p>
 <ul>
 <li>git data 저장소 변경</li>
 </ul>
@@ -579,19 +577,19 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620366321"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620366321"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620366321"></script>
-    <script src="/js/jquery.sticky.js?1620366321"></script>
-    <script src="/js/featherlight.min.js?1620366321"></script>
-    <script src="/js/highlight.pack.js?1620366321"></script>
+    <script src="/js/clipboard.min.js?1620369385"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620369385"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620369385"></script>
+    <script src="/js/jquery.sticky.js?1620369385"></script>
+    <script src="/js/featherlight.min.js?1620369385"></script>
+    <script src="/js/highlight.pack.js?1620369385"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620366321"></script>
-    <script src="/js/learn.js?1620366321"></script>
-    <script src="/js/hugo-learn.js?1620366321"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620369385"></script>
+    <script src="/js/learn.js?1620369385"></script>
+    <script src="/js/hugo-learn.js?1620369385"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620366321"></script>
+            <script src="/mermaid/mermaid.js?1620369385"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
