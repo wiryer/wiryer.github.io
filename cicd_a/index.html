@@ -12,22 +12,22 @@
     <title> - It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620440133" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620440133" rel="stylesheet">
-    <link href="/css/hybrid.css?1620440133" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620440133" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620440133" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620440133" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620440133" rel="stylesheet">
-    <link href="/css/theme.css?1620440133" rel="stylesheet">
-    <link href="/css/tabs.css?1620440133" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620440133" rel="stylesheet">
+    <link href="/css/nucleus.css?1620440667" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620440667" rel="stylesheet">
+    <link href="/css/hybrid.css?1620440667" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620440667" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620440667" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620440667" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620440667" rel="stylesheet">
+    <link href="/css/theme.css?1620440667" rel="stylesheet">
+    <link href="/css/tabs.css?1620440667" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620440667" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1620440133" rel="stylesheet">
+    <link href="/css/theme-blue.css?1620440667" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620440133"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620440667"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620440133"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620440133"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620440667"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620440667"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620440133"></script>
+<script type="text/javascript" src="/js/search.js?1620440667"></script>
 
     
   </div>
@@ -284,7 +284,8 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
 <li>Omnibus / Installation 또는 Docker(Kubernetes) or Not
 <ul>
 <li>Omnibus 방식으로 VM에 설치(GitLab Self-Managed) 를 선택했음.</li>
-<li>볼륨 위치는 후에 수정 가능(프로젝트 진행 중에 수정하는 것은 시스템 중지등이 발생시 좋지않음) :  <strong><!-- raw HTML omitted -->생성 시 데이터분리,로그분리를 위해 S3등을 제공받아 /var/opt/gitlab, /var/log/gitlab  를 링크 설정을 추천<!-- raw HTML omitted --></strong></li>
+<li>볼륨 위치는 후에 수정 가능(프로젝트 진행 중에 수정하는 것은 시스템 중지등이 발생시 좋지않음) :<br>
+<strong><!-- raw HTML omitted -->생성 시 데이터,로그분리를 위해 S3등을 제공받아 /var/opt/gitlab, /var/log/gitlab 경로를 링크 설정하는 것을 추천<!-- raw HTML omitted --></strong></li>
 </ul>
 </li>
 <li>설치할 VM요청: VM 인스턴스 생성작업 및 그와 관련된 LoadBalancer, SecurityGroup 생성 등의 일련의 작업 진행을 통해 설치할 VM과 네크워크를 제공받음.</li>
@@ -316,7 +317,7 @@ $ sudo gitlab-ctl restart
 <li>gitlab.rb 파일 수정 시 reconfigure 명령을 통해 반영하고 재시작한다.</li>
 </ul>
 <h4 id="gitlab-데이터-볼륨-설정">Gitlab 데이터 볼륨 설정</h4>
-<p><strong><!-- raw HTML omitted -->생성 시 데이터분리,로그분리를 위해 S3등을 제공받아 /var/opt/gitlab, /var/log/gitlab  를 링크 설정을 추천<!-- raw HTML omitted --></strong></p>
+<p><strong><!-- raw HTML omitted -->생성 시 데이터,로그분리를 위해 S3등을 제공받아 /var/opt/gitlab, /var/log/gitlab 경로를 링크 설정하는 것을 추천<!-- raw HTML omitted --></strong></p>
 <ul>
 <li>설정의 예시: 설치 후 Disk 공간을 분리시 다음과 같은 방법으로 진행할 수 있다.</li>
 <li>모든 설정은 /etc/gitlab/gitlab.rb 파일에서 설정한다.</li>
@@ -336,7 +337,7 @@ $ sudo vi /etc/gitlab/gitlab.rb
 [gitlab_rails, registry, gitlab_workhorse, puma, sidekiq, gitlab_shell, postgresql, redis, nginx, logrotate, prometheus, alertmanager, node_exporter, redis_exporter, postgres_exporter, gitlab_exporter , grafana, gitaly]</li>
 </ul>
 <!-- raw HTML omitted -->
-<p>Gitlab 서버 동작확인 웹브라우저 실행 후 해당 URL로 접속한다.
+<p>[Gitlab 서버 동작확인]<br>
 <figure><img src="/cicd/set_password.png"
          alt="Password 설정"/><figcaption>
             <h4>Figure 2-1. Password 설정</h4>
@@ -535,19 +536,19 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620440133"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620440133"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620440133"></script>
-    <script src="/js/jquery.sticky.js?1620440133"></script>
-    <script src="/js/featherlight.min.js?1620440133"></script>
-    <script src="/js/highlight.pack.js?1620440133"></script>
+    <script src="/js/clipboard.min.js?1620440667"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620440667"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620440667"></script>
+    <script src="/js/jquery.sticky.js?1620440667"></script>
+    <script src="/js/featherlight.min.js?1620440667"></script>
+    <script src="/js/highlight.pack.js?1620440667"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620440133"></script>
-    <script src="/js/learn.js?1620440133"></script>
-    <script src="/js/hugo-learn.js?1620440133"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620440667"></script>
+    <script src="/js/learn.js?1620440667"></script>
+    <script src="/js/hugo-learn.js?1620440667"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620440133"></script>
+            <script src="/mermaid/mermaid.js?1620440667"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
