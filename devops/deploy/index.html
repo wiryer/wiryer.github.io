@@ -12,22 +12,22 @@
     <title>2. 배포절차 - It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620451606" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620451606" rel="stylesheet">
-    <link href="/css/hybrid.css?1620451606" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620451606" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620451606" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620451606" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620451606" rel="stylesheet">
-    <link href="/css/theme.css?1620451606" rel="stylesheet">
-    <link href="/css/tabs.css?1620451606" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620451606" rel="stylesheet">
+    <link href="/css/nucleus.css?1620455252" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620455252" rel="stylesheet">
+    <link href="/css/hybrid.css?1620455252" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620455252" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620455252" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620455252" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620455252" rel="stylesheet">
+    <link href="/css/theme.css?1620455252" rel="stylesheet">
+    <link href="/css/tabs.css?1620455252" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620455252" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1620451606" rel="stylesheet">
+    <link href="/css/theme-blue.css?1620455252" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620451606"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620455252"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620451606"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620451606"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620455252"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620455252"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620451606"></script>
+<script type="text/javascript" src="/js/search.js?1620455252"></script>
 
     
   </div>
@@ -293,12 +293,8 @@
 <ul>
 <li>최초 프로젝트 생성은 SWA 등 maintainer 권한을 가진 사용자가 생성한다.</li>
 </ul>
-<figure><img src="/cicd/project_create.png"
-         alt="프로젝트 생성"/><figcaption>
-            <h4>Figure-1. 프로젝트 생성</h4>
-        </figcaption>
-</figure>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
@@ -313,14 +309,10 @@ git commit -m &quot;Initial commit&quot;
 git push -u origin master
 </code></pre><p> </p>
 <ul>
-<li>최초 생성된 master 브랜치로부터 develop 브랜치를 생성한다.
-<figure><img src="/cicd/develop_branch_create.png"
-         alt="master로부터 develop 브랜치 생성"/><figcaption>
-            <h4>Figure-2. master로부터 develop 브랜치 생성</h4>
-        </figcaption>
-</figure>
-</li>
+<li>최초 생성된 master 브랜치로부터 develop 브랜치를 생성한다.</li>
 </ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
@@ -330,12 +322,8 @@ git push -u origin master
 <li>master, develop 브랜치는 protected로 설정되어 있어서 빌드 및 배포가 가능하다.</li>
 <li>개발자는 develop 브랜치에 대한 merge 권한만 주고, push 권한은 제외해 개발자는 feature를 통해서 merge 하도록 한다.</li>
 </ul>
-<figure><img src="/cicd/develop_protected.png"
-         alt="develop 브랜치 Protected 설정"/><figcaption>
-            <h4>Figure-3. develop 브랜치 Protected 설정 </h4>
-        </figcaption>
-</figure>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
@@ -344,23 +332,11 @@ git push -u origin master
 <li>Protected Tags 설정을 해야만 Tag에 의한 운영 배포 시 Protected 하게 설정된 글로벌 변수를 사용할 수 있다.</li>
 <li>Protected Tags 설정이 된 Tag 들을 부득이하게 삭제 할 경우 Protected를 풀어줘야 한다.(삭제 후 재설정)</li>
 </ul>
-<figure><img src="/cicd/protected_tags.png"
-         alt="Tag Protected 설정"/><figcaption>
-            <h4>Figure-4. Tag Protected 설정</h4>
-        </figcaption>
-</figure>
-
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <ul>
-<li>프로젝트에 대한 담당 개발자에게 개발 권한을 준다.
-<figure><img src="/cicd/project_develop_permission.png"
-         alt="개발자에게 프로젝트 개발 권한설정"/><figcaption>
-            <h4>Figure-5. 개발자에게 프로젝트 개발 권한설정</h4>
-        </figcaption>
-</figure>
-</li>
+<li>프로젝트에 대한 담당 개발자에게 개발 권한을 준다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -369,13 +345,7 @@ git push -u origin master
 <p>2.1 개발자 환경구성</p>
 <ul>
 <li>SWA 가 제공하는 가이드에 따른 로컬에 개발환경 설정</li>
-<li>개발대상 프로젝트를 로컬에 내려 받는다. 
-<figure><img src="/cicd/clone_url.png"
-         alt="clone url 복사"/><figcaption>
-            <h4>Figure-6. clone url 복사</h4>
-        </figcaption>
-</figure>
-</li>
+<li>개발대상 프로젝트를 로컬에 내려 받는다. </li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -395,60 +365,30 @@ git push origin feature/test1
 <li>feature 브랜치를 develop 브랜치에 merge 한다.</li>
 <li></li>
 </ul>
-<figure><img src="/cicd/develop_merge.png"
-         alt="develop 브랜치에 merge"/><figcaption>
-            <h4>Figure-7. develop 브랜치에 merge</h4>
-        </figcaption>
-</figure>
-
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <ul>
-<li>develop 브랜치의 pipeline이 성공여부를 확인 후 개발 환경에서 테스트를 한다.
-<figure><img src="/cicd/develop_pipeline.png"
-         alt="develop 브랜치 pipeline"/><figcaption>
-            <h4>Figure-8. develop 브랜치 pipeline</h4>
-        </figcaption>
-</figure>
-</li>
+<li>develop 브랜치의 pipeline이 성공여부를 확인 후 개발 환경에서 테스트를 한다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <p>2.3 스테이지</p>
 <ul>
-<li>개발환경에서 테스트가 통과하면, master 브랜치에 merge request를 한다.
-<figure><img src="/cicd/master_branch_merge.png"
-         alt="master 브랜치 merge"/><figcaption>
-            <h4>Figure-9. master 브랜치 merge</h4>
-        </figcaption>
-</figure>
-</li>
+<li>개발환경에서 테스트가 통과하면, master 브랜치에 merge request를 한다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <ul>
-<li>merge request 요청을 받고, <strong>담당 Maintainer</strong>가 (리뷰 후)  merge를 진행한다.
-<figure><img src="/cicd/merge_ok.png"
-         alt="merge 승인"/><figcaption>
-            <h4>Figure-10. merge 승인</h4>
-        </figcaption>
-</figure>
-</li>
+<li>merge request 요청을 받고, <strong>담당 Maintainer</strong>가 (리뷰 후)  merge를 진행한다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <ul>
-<li>master 브랜치의 pipeline이 성공여부를 확인 후 스테이지 환경에서 테스트를 한다.
-<figure><img src="/cicd/master_pipeline.png"
-         alt="master 브랜치 pipeline"/><figcaption>
-            <h4>Figure-11. master 브랜치 pipeline</h4>
-        </figcaption>
-</figure>
-</li>
+<li>master 브랜치의 pipeline이 성공여부를 확인 후 스테이지 환경에서 테스트를 한다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -458,38 +398,22 @@ git push origin feature/test1
 <li>스테이지 환경에서 <strong>Maintainer가</strong> 테스트가 통과하면, 태깅 작업을 통해 운영환경에 배포한다.</li>
 <li>Tag name은 protected 설정된 글로벌 변수를 사용하기 위해 protected tag에 설정한 패턴에 따른다.</li>
 <li>현재 protected tag는 prod-* 로 되어있다.</li>
-<li>master 브랜치로부터 태깅한다. develop 브랜치로 태깅시 운영환경 빌드 과정에서 오류가 발생한다.
-<figure><img src="/cicd/tag_setting.png"
-         alt="Tag 설정"/><figcaption>
-            <h4>Figure-12. Tag 설정</h4>
-        </figcaption>
-</figure>
-</li>
+<li>master 브랜치로부터 태깅한다. develop 브랜치로 태깅시 운영환경 빌드 과정에서 오류가 발생한다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <ul>
 <li>이전 master 커밋에 대한 Tag 작업은 해당 커밋 화면에서 진행 할 수 있다.</li>
-<li>해당 commit → Options → Tag 클릭
-<figure><img src="/cicd/pre_commit_tag.png"
-         alt="이전 커밋으로 부터 Tag"/><figcaption>
-            <h4>Figure-13. 이전 커밋으로 부터 Tag</h4>
-        </figcaption>
-</figure>
-</li>
+<li>해당 commit → Options → Tag 클릭</li>
 </ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <ul>
-<li>운영환경의 파이프 라인을 통해 배포 확인 후 운영환경에서 해당 기능을 점검한다.
-<figure><img src="/cicd/prod_pipeline.png"
-         alt="운영환경의 pipeline"/><figcaption>
-            <h4>Figure-14. 운영환경의 pipeline</h4>
-        </figcaption>
-</figure>
-</li>
+<li>운영환경의 파이프 라인을 통해 배포 확인 후 운영환경에서 해당 기능을 점검한다.</li>
 </ul>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -613,19 +537,19 @@ git push origin feature/test1
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620451606"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620451606"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620451606"></script>
-    <script src="/js/jquery.sticky.js?1620451606"></script>
-    <script src="/js/featherlight.min.js?1620451606"></script>
-    <script src="/js/highlight.pack.js?1620451606"></script>
+    <script src="/js/clipboard.min.js?1620455252"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620455252"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620455252"></script>
+    <script src="/js/jquery.sticky.js?1620455252"></script>
+    <script src="/js/featherlight.min.js?1620455252"></script>
+    <script src="/js/highlight.pack.js?1620455252"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620451606"></script>
-    <script src="/js/learn.js?1620451606"></script>
-    <script src="/js/hugo-learn.js?1620451606"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620455252"></script>
+    <script src="/js/learn.js?1620455252"></script>
+    <script src="/js/hugo-learn.js?1620455252"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620451606"></script>
+            <script src="/mermaid/mermaid.js?1620455252"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
