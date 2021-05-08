@@ -27,7 +27,7 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
       <guid>http://wiryer.github.io/devops/deploy/</guid>
       <description>1. 프로젝트 생성 1.1 개발자 등록
  Gitlab 시스템에 개발자를 등록한다. 등록 방법은 SWA가 제시하는 방법에 따른다. SWA(또는 Admin)는 프로젝트에 대한 개발자 권한을 설정하여 제공한다.   1.2 프로젝트 생성
- 최초 프로젝트 생성은 SWA 등 maintainer 권한을 가진 사용자가 생성한다.    프로젝트를 생성 후, 최초 소스를 Master Origin에 PUSH 한다.  cd example git init git remote add origin http://gitlab.dev.lghomin.com/sample/example.git git add . git commit -m &amp;quot;Initial commit&amp;quot; git push -u origin master   최초 생성된 master 브랜치로부터 develop 브랜치를 생성한다.</description>
+ 최초 프로젝트 생성은 SWA 등 maintainer 권한을 가진 사용자가 생성한다.   Figure-1. 프로젝트 생성     프로젝트를 생성 후, 최초 소스를 Master Origin에 PUSH 한다.  cd example git init git remote add origin http://gitlab.dev.lghomin.com/sample/example.git git add .</description>
     </item>
     
     <item>
