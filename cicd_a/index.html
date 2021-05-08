@@ -12,22 +12,22 @@
     <title> - It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620440667" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620440667" rel="stylesheet">
-    <link href="/css/hybrid.css?1620440667" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620440667" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620440667" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620440667" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620440667" rel="stylesheet">
-    <link href="/css/theme.css?1620440667" rel="stylesheet">
-    <link href="/css/tabs.css?1620440667" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620440667" rel="stylesheet">
+    <link href="/css/nucleus.css?1620444709" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620444709" rel="stylesheet">
+    <link href="/css/hybrid.css?1620444709" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620444709" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620444709" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620444709" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620444709" rel="stylesheet">
+    <link href="/css/theme.css?1620444709" rel="stylesheet">
+    <link href="/css/tabs.css?1620444709" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620444709" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1620440667" rel="stylesheet">
+    <link href="/css/theme-blue.css?1620444709" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620440667"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620444709"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620440667"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620440667"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620444709"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620444709"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620440667"></script>
+<script type="text/javascript" src="/js/search.js?1620444709"></script>
 
     
   </div>
@@ -358,11 +358,9 @@ $ sudo vi /etc/gitlab/gitlab.rb
 <li>Job의 실행 방식(Executor)는: Docker</li>
 </ul>
 <h4 id="선행작업">선행작업</h4>
-<ol>
-<li>Docker 설치</li>
-</ol>
+<p>[Docker 설치]</p>
 <ul>
-<li>Gitlab-Runner는 Pipeline(Job)를 실행하기 위해 local에 설치된 Docker Daemon을 공유.</li>
+<li>Gitlab-Runner의 Docker 실행방식 사용: Pipeline(Job)를 실행하기 위해 local에 설치된 Docker Daemon을 공유.</li>
 </ul>
 <pre><code>[gitlab~]$ sudo yum install docker -y
 [gitlab~]$ sudo service docker start # 서비스 시작
@@ -459,23 +457,27 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 <li>
 <p>Variables</p>
 <ul>
-<li>ACCESS_TOKEN: 사용자 계정에서 생성한 Token 값. (web-guide에 작성된 소스를 webbo/webpo 에 반영하기 위한 인증을 위한 ACCESS 값)</li>
-<li>CLUSTER_develop: GCP 쿠버네티스 개발 클러스터 명</li>
-<li>CLUSTER_master: GCP 쿠버네티스 스테이지 클러스터 명</li>
-<li>CLUSTER_PRD: GCP 쿠버네티스 운영 클러스터 명</li>
-<li>GCP_PROJECT_develop: 개발 프로젝트 ID</li>
-<li>GCP_PROJECT_master: 스테이지 프로젝트 ID</li>
-<li>GCP_PROJECT_PRD_ID: 운영 프로젝트 ID</li>
-<li>GOOGLE_KEY_SECRET: Cluster 접속을 위한 계정</li>
-<li>K8S_DEPLOY_FILE_NAME: 쿠버네티스 Deploy 파일 명</li>
-<li>K8S_SVC_FILE_NAME: 쿠버네티스 Service 파일 명</li>
-<li>NEXUS_URL: Nexus 레파지토리 URL</li>
-<li>REGION: GCP 리전 명</li>
-<li>REGISTRY_URL: GCR 명</li>
-<li>SONAR_ON_FAIL: soanrqube 실패에 따른 파이프라인 중지여부 (false: 실패시 멈춤, true: 실패여부에 상관없이 파이프 라인 진행)</li>
-<li>SONARQUBE_KEY: sonarqube 정적 테스트 실행 권한 키</li>
-<li>SONARQUBE_URL: sonarqube URL</li>
+<li>프로젝트 내에서 다른 프로젝트의 소스를 clone 위한 인증을 위한 ACCESS 값 필요</li>
 </ul>
+<blockquote>
+<p>ACCESS_TOKEN: 사용자 계정에서 생성한 Token 값. ()</p>
+</blockquote>
+<ul>
+<li>develop, master 브랜치를 이용시 동일 스크립트를 사용해 처리하기 위해 변수명이 CLUSTER_develop/_master, GCP_PROJECT_develop/_master 형식으로 사용함</li>
+</ul>
+<blockquote>
+<p>CLUSTER_develop: GCP 쿠버네티스 개발 클러스터 명<br>
+CLUSTER_master: GCP 쿠버네티스 스테이지 클러스터 명<br>
+CLUSTER_PRD: GCP 쿠버네티스 운영 클러스터 명</p>
+</blockquote>
+<blockquote>
+<p>GCP_PROJECT_develop: 개발 프로젝트 ID<br>
+GCP_PROJECT_master: 스테이지 프로젝트 ID<br>
+GCP_PROJECT_PRD_ID: 운영 프로젝트 ID</p>
+</blockquote>
+<blockquote>
+<p>SONAR_ON_FAIL: soanrqube 실패에 따른 파이프라인 중지여부 (false: 실패시 멈춤, true: 실패여부에 상관없이 파이프 라인 진행)</p>
+</blockquote>
 </li>
 </ul>
 <!-- raw HTML omitted -->
@@ -486,8 +488,7 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 <ul>
 <li>프로젝트에 대한 대상 소스 관리를 위한 서비스에 대한 프로젝트를 추가</li>
 <li>그룹생성 후 그룹 별 서비스에 대한 프로젝트를 생성하면 관리에 용이함</li>
-<li>그룹 생성 과 프로젝트 생성
-좌측 탭 메뉴에 그룹을 선택 후 생성할 수 있다.</li>
+<li>그룹 생성 과 프로젝트 생성: 좌측 탭 메뉴에 그룹을 선택 후 생성할 수 있다.</li>
 </ul>
 
 
@@ -536,19 +537,19 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620440667"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620440667"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620440667"></script>
-    <script src="/js/jquery.sticky.js?1620440667"></script>
-    <script src="/js/featherlight.min.js?1620440667"></script>
-    <script src="/js/highlight.pack.js?1620440667"></script>
+    <script src="/js/clipboard.min.js?1620444709"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620444709"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620444709"></script>
+    <script src="/js/jquery.sticky.js?1620444709"></script>
+    <script src="/js/featherlight.min.js?1620444709"></script>
+    <script src="/js/highlight.pack.js?1620444709"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620440667"></script>
-    <script src="/js/learn.js?1620440667"></script>
-    <script src="/js/hugo-learn.js?1620440667"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620444709"></script>
+    <script src="/js/learn.js?1620444709"></script>
+    <script src="/js/hugo-learn.js?1620444709"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620440667"></script>
+            <script src="/mermaid/mermaid.js?1620444709"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
