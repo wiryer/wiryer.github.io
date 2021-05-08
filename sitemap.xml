@@ -8,6 +8,9 @@
     <loc>http://wiryer.github.io/about/</loc>
     <lastmod>2021-04-29T22:02:13+09:00</lastmod>
   </url><url>
+    <loc>http://wiryer.github.io/</loc>
+    <priority>0</priority>
+  </url><url>
     <loc>http://wiryer.github.io/cicd_a/</loc>
     <priority>0</priority>
   </url><url>
@@ -15,8 +18,6 @@
     <priority>0</priority>
   </url><url>
     <loc>http://wiryer.github.io/categories/</loc>
-  </url><url>
-    <loc>http://wiryer.github.io/</loc>
   </url><url>
     <loc>http://wiryer.github.io/tags/</loc>
   </url>
