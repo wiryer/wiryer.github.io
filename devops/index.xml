@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>It&#39;s a Wonderful Life</title>
+    <link>http://wiryer.github.io/devops/</link>
+    <description>Recent content on It&#39;s a Wonderful Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 29 Apr 2021 22:13:21 +0900</lastBuildDate><atom:link href="http://wiryer.github.io/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2. 배포절차</title>
+      <link>http://wiryer.github.io/devops/cicd_b/</link>
+      <pubDate>Thu, 29 Apr 2021 22:13:21 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/devops/cicd_b/</guid>
+      <description>1. 프로젝트 생성 1.1 개발자 등록
+ Gitlab 시스템에 개발자를 등록한다. 등록 방법은 SWA가 제시하는 방법에 따른다. SWA(또는 Admin)는 프로젝트에 대한 개발자 권한을 설정하여 제공한다.   1.2 프로젝트 생성
+ 최초 프로젝트 생성은 SWA 등 maintainer 권한을 가진 사용자가 생성한다.   Figure-1. 프로젝트 생성     프로젝트를 생성 후, 최초 소스를 Master Origin에 PUSH 한다.  cd example git init git remote add origin http://gitlab.dev.lghomin.com/sample/example.git git add .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://wiryer.github.io/devops/cicd_a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiryer.github.io/devops/cicd_a/</guid>
+      <description>목차  솔루션 선정 Gitlab 설치 Gitlab Runner 연동 프로젝트 추가    1. 솔루션 선정  형상관리서버  Gitlab 선정: Git 기반의 자체구축관리의 무료 버전  CI 도구선정   Gitlab-Runner선정의 이유(Jenkins를 선정하지 않은 이유)
+A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시성이 높음
+ 전체 개발 단계에서 일관된 UI제공 여러 어플리케이션 로그인 사용불편제거 설치 및 백업 등 유지관리가 용이함.\  B. Plugin 등이 전혀 필요없음
+ Jenkins의 Plugin 충돌 경험  C.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://wiryer.github.io/devops/cicd_learn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiryer.github.io/devops/cicd_learn/</guid>
+      <description>사전작업  [Local 작업]  Local 도구 설치   Terraform 0.14.8 Kubectl 1.19 이상 awscli 2.0 이상 eksctl 0.42.0 git, jq 최신버전.  AWS 계정 (ex. Cloud Innovation팀에서 제공하는 AWS 교육 계정)   AWS console에서 오른쪽 본인 계정명 클릭 &amp;raquo; My Security Credentials 클릭 화면 중앙의 &amp;ldquo;Access keys(access key ID and secret access key)&amp;rdquo; 메뉴 선택 Create New Access Key 로 클릭 후 Access Key ID 와 Secret Access Key를 로컬에 저장 자격증명 (~/.</description>
+    </item>
+    
+  </channel>
+</rss>
