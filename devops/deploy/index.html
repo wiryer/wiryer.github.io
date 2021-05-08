@@ -12,22 +12,22 @@
     <title>2. 배포절차 - It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620467532" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620467532" rel="stylesheet">
-    <link href="/css/hybrid.css?1620467532" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620467532" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620467532" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620467532" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620467532" rel="stylesheet">
-    <link href="/css/theme.css?1620467532" rel="stylesheet">
-    <link href="/css/tabs.css?1620467532" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620467532" rel="stylesheet">
+    <link href="/css/nucleus.css?1620467934" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620467934" rel="stylesheet">
+    <link href="/css/hybrid.css?1620467934" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620467934" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620467934" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620467934" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620467934" rel="stylesheet">
+    <link href="/css/theme.css?1620467934" rel="stylesheet">
+    <link href="/css/tabs.css?1620467934" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620467934" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1620467532" rel="stylesheet">
+    <link href="/css/theme-blue.css?1620467934" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1620467532"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620467934"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620467532"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620467532"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620467934"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620467934"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620467532"></script>
+<script type="text/javascript" src="/js/search.js?1620467934"></script>
 
     
   </div>
@@ -300,6 +300,11 @@
 </figure>
 
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="project_create.png" alt="프로젝트 생성">
+<em>Fig. Figure-1. 프로젝트 생성</em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p> </p>
 <ul>
 <li>프로젝트를 생성 후, 최초 소스를 Master Origin에 PUSH 한다.</li>
@@ -321,6 +326,11 @@ git push -u origin master
 </li>
 </ul>
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="develop_branch_create.png" alt="master로부터 develop 브랜치 생성">
+<em>Fig. Figure-2. master로부터 develop 브랜치 생성</em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p> </p>
 <p>1.3  권한설정</p>
 <ul>
@@ -335,6 +345,9 @@ git push -u origin master
 </figure>
 
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="develop_protected.png" alt="develop 브랜치 Protected 설정">
+<em>Fig. Figure-3. develop 브랜치 Protected 설정</em></p>
 <p> </p>
 <ul>
 <li>태그에 대한 Protected 설정을 한다.</li>
@@ -348,6 +361,9 @@ git push -u origin master
 </figure>
 
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="protected_tags.png" alt="Tag Protected 설정">
+<em>Fig. Figure-4. Tag Protected 설정</em></p>
 <p> </p>
 <ul>
 <li>프로젝트에 대한 담당 개발자에게 개발 권한을 준다.
@@ -358,6 +374,11 @@ git push -u origin master
 </figure>
 </li>
 </ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="project_develop_permission.png" alt="개발자에게 프로젝트 개발 권한설정">
+<em>Fig. Figure-5. 개발자에게 프로젝트 개발 권한설정</em></p>
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <p> </p>
 <h3 id="2-배포절차">2. 배포절차</h3>
@@ -372,6 +393,11 @@ git push -u origin master
 </figure>
 </li>
 </ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="project_develop_permission.png" alt="clone url 복사">
+<em>Fig. Figure-6. clone url 복사</em></p>
+<!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <pre><code>git clone http://gitlab.dev.lghomin.com/sample/example.git
 </code></pre><p> </p>
@@ -396,6 +422,9 @@ git push origin feature/test1
 </figure>
 
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="develop_merge.png" alt="develop 브랜치에 merge">
+<em>Fig. Figure-7. develop 브랜치에 merge</em></p>
 <p> </p>
 <ul>
 <li>develop 브랜치의 pipeline이 성공여부를 확인 후 개발 환경에서 테스트를 한다.
@@ -407,6 +436,9 @@ git push origin feature/test1
 </li>
 </ul>
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="develop_pipeline.png" alt="develop 브랜치 pipeline">
+<em>Fig. Figure-8. develop 브랜치 pipeline</em></p>
 <p> </p>
 <p>2.3 스테이지</p>
 <ul>
@@ -419,6 +451,9 @@ git push origin feature/test1
 </li>
 </ul>
 <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><img src="master_branch_merge.png" alt="master 브랜치 merge">
+<em>Fig. Figure-9. master 브랜치 merge</em></p>
 <p> </p>
 <ul>
 <li>merge request 요청을 받고, <strong>담당 Maintainer</strong>가 (리뷰 후)  merge를 진행한다.
@@ -599,19 +634,19 @@ git push origin feature/test1
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620467532"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620467532"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620467532"></script>
-    <script src="/js/jquery.sticky.js?1620467532"></script>
-    <script src="/js/featherlight.min.js?1620467532"></script>
-    <script src="/js/highlight.pack.js?1620467532"></script>
+    <script src="/js/clipboard.min.js?1620467934"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620467934"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620467934"></script>
+    <script src="/js/jquery.sticky.js?1620467934"></script>
+    <script src="/js/featherlight.min.js?1620467934"></script>
+    <script src="/js/highlight.pack.js?1620467934"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620467532"></script>
-    <script src="/js/learn.js?1620467532"></script>
-    <script src="/js/hugo-learn.js?1620467532"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620467934"></script>
+    <script src="/js/learn.js?1620467934"></script>
+    <script src="/js/hugo-learn.js?1620467934"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620467532"></script>
+            <script src="/mermaid/mermaid.js?1620467934"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

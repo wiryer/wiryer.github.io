@@ -5,9 +5,20 @@ img[src$='#center'] {
     height: auto;
 }
 
-em {
+#body em {
     font-style: normal;
     display: inherit;
     text-align: center;
     font-size: 90%;
+}
+
+
+
+#body img, #body .video-container {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-bottom: 0.5rem auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
 }
