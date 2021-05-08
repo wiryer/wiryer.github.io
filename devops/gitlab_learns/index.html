@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags - It&#39;s a Wonderful Life</title>
+    <title>3. Gitlab 구축 연습 - It&#39;s a Wonderful Life</title>
 
     
     <link href="/css/nucleus.css?1620447210" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/devops/gitlab_learns/">
     <nav id="sidebar" class="">
 
 
@@ -99,7 +99,7 @@
   
     
     <li data-nav-id="/devops/" title="" class="dd-item
-        
+        parent
         
         
         ">
@@ -167,7 +167,7 @@
  
   
     
-      <li data-nav-id="/devops/gitlab_learns/" title="3. Gitlab 구축 연습" class="dd-item ">
+      <li data-nav-id="/devops/gitlab_learns/" title="3. Gitlab 구축 연습" class="dd-item active">
         <a href="/devops/gitlab_learns/">
         3. Gitlab 구축 연습
         
@@ -243,14 +243,24 @@
                   <span class="links">
                  
                  
-                   Tags
+                   3. Gitlab 구축 연습
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#사전작업">사전작업</a></li>
+        <li><a href="#terraform을-통한-생성작업">Terraform을 통한 생성작업</a></li>
+        <li><a href="#확인">확인</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -266,24 +276,113 @@
           
             <h1>
               
-                tag ::
-              
-              Tags
+              3. Gitlab 구축 연습
             </h1>
           
 
         
 
 
-
-
-
+<blockquote>
+<h3 id="사전작업">사전작업</h3>
+</blockquote>
+<h4 id="local-작업">[Local 작업]</h4>
+<ol>
+<li>Local 도구 설치</li>
+</ol>
 <ul>
-	
+<li>Terraform 0.14.8</li>
+<li>Kubectl 1.19 이상</li>
+<li>awscli 2.0 이상</li>
+<li>eksctl 0.42.0</li>
+<li>git, jq 최신버전.</li>
 </ul>
+<ol start="2">
+<li>AWS 계정 (ex. Cloud Innovation팀에서 제공하는 AWS 교육 계정)</li>
+</ol>
+<ul>
+<li>AWS console에서 오른쪽 본인 계정명 클릭 &raquo; My Security Credentials 클릭</li>
+<li>화면 중앙의 &ldquo;Access keys(access key ID and secret access key)&rdquo; 메뉴 선택</li>
+<li>Create New Access Key 로 클릭 후 Access Key ID 와 Secret Access Key를 로컬에 저장</li>
+<li>자격증명 (~/.aws/config, ~/.aws/credentials 파일)</li>
+</ul>
+<pre><code>$ aws configure --profile cds-archi  
+  AWS Access Key ID [None]: &lt;본인 Access key ID&gt;
+  AWS Secret Access Key [None]: &lt;본인 Secret Access Key&gt;
+  Default region name [None]: ap-northeast-2
+  Default output format [None]: json
+</code></pre><pre><code> $ alias aws=&quot;aws --profile cds-archi&quot;
+ $ alias eksctl=&quot;eksctl --profile cds-archi&quot;
+</code></pre><h4 id="aws-console-작업">[AWS Console 작업]</h4>
+<ul>
+<li>기본 VPC Name을 cds-vpc</li>
+<li>기본 Subnet 4 곳 중에 한 곳에 Name을 cds-subnet</li>
+<li>기본 Subent az-3:cds-kube-az3, az-4:cds-kube-az4 로 설정(kubernetes는  가용성을 위한 multi-AZ)</li>
+<li>기본 Internet Gateway Name을 cds-igw <br>
+<!-- raw HTML omitted --></li>
+</ul>
+<hr>
+<blockquote>
+<h3 id="terraform을-통한-생성작업">Terraform을 통한 생성작업</h3>
+</blockquote>
+<h4 id="eks-생성">[EKS 생성]</h4>
+<ul>
+<li>cpu limit 으로, c5.large 로 2개 node 만 실행함. (15분정도 소요)</li>
+</ul>
+<pre><code>eks]# terraform init
+eks]# terraform plan -var-file=eks.tfvars
+eks]# terraform apply -auto-approve -var-file=eks.tfvars
+</code></pre><!-- raw HTML omitted -->
+<h4 id="gitalb-서버-생성">[Gitalb 서버 생성]</h4>
+<ul>
+<li>Gitalb 서버 생성 (생성 후 접속까지는 10분안팎 소요)</li>
+<li>키페어(EC2 &raquo; Network &amp; Security &raquo; Key pairs ) 생성 Name 은 &ldquo;cds-sec&rdquo; file format은 pem 선택 : Gitlab 서버 접속(Bastion 대용)</li>
+</ul>
+<pre><code>gitlab]# terraform init
+gitlab]# terraform plan -var-file=gitlab.tfvars
+gitlab]# terraform apply -auto-approve -var-file=gitlab.tfvars
+</code></pre><ul>
+<li>gitlab instance 생성 후 kubernetes cluster에 아래와 같이 gitlab-runner-role role 추가</li>
+</ul>
+<pre><code>$ export CLUSTER_NAME=cds-eks-cls
+$ export ACCOUNT_ID=&lt;본인계정ACCOUNT_ID&gt;
+$ alias eksctl=&quot;eksctl --profile cds-archi&quot; 
+$ eksctl create iamidentitymapping --cluster $CLUSTER_NAME --arn arn:aws:iam::$ACCOUNT_ID:role/gitlab-runner-role --group system:masters --username system:node:{{EC2PrivateDNSName}}
+</code></pre><ul>
+<li>hosts 파일 변경:  &lt;gitlab 서버의 public IP&gt; cds.gitlab-share.com
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<h4 id="gitalb-runner-서버-생성-및-연동">[Gitalb-Runner 서버 생성 및 연동]</h4>
+<ul>
+<li>gitlab 패스워드 설정 후 token 값 복사(gitlab-runner 연동에 필요)
+(Gitlab 페이지의 Admin area -&gt; Overview -&gt; Runners -&gt; (우측의)Set up Shared Runner manually)</li>
+</ul>
+<pre><code>gitlab_runner]# terraform init
+gitlab_runner]# terraform plan -var-file=runner.tfvars
+gitlab_runner]# terraform apply -auto-approve -var-file=runner.tfvars
+</code></pre><ul>
+<li>terraform 실행 완료 후 3~5분정도 Admin area -&gt; Overview -&gt; Runners 에 추가된 항목을 볼 수 있음.<br>
+<!-- raw HTML omitted --></li>
+</ul>
+<h4 id="sample-프로젝트-추가maven">[Sample 프로젝트 추가(Maven)]</h4>
+<ul>
+<li>sample 그룹에 springmusic 프로젝트 추가</li>
+<li>springmusic 프로그램 push</li>
+<li>springmusic 프로젝트&gt; CI/CD &gt; Pipelines 에서 확인</li>
+<li>처음 빌드시 maven dependencies download로 인해 수분 소요
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<hr>
+<blockquote>
+<h3 id="확인">확인</h3>
+</blockquote>
+<pre><code>$ alias aws=&quot;aws --profile cds-archi&quot; 
+$ aws eks --region ap-northeast-2 update-kubeconfig --name $CLUSTER_NAME 
+$ export pod=$(kubectl get pod --no-headers -n default -o custom-columns=&quot;:metadata.name&quot;  | grep springmusic) 
+$ kubectl port-forward $pod 8080:8080 
+</code></pre>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -318,8 +417,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -333,6 +430,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -365,6 +465,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -417,3 +518,4 @@
 
   </body>
 </html>
+
