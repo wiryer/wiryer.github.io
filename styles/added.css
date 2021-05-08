@@ -17,7 +17,7 @@ img[src$='#center'] {
 #body img, #body .video-container {
     margin-top: 2rem;
     margin-left: auto;
-    margin-bottom: 0.5rem auto;
+    margin-bottom: 0.5rem;
     margin-right: auto;
     display: block;
     text-align: center;
