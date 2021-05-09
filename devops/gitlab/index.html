@@ -12,22 +12,22 @@
     <title>1. Gitlab/Gitlab-Runner - It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620544223" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620544223" rel="stylesheet">
-    <link href="/css/hybrid.css?1620544223" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620544223" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620544223" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620544223" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620544223" rel="stylesheet">
-    <link href="/css/theme.css?1620544223" rel="stylesheet">
-    <link href="/css/tabs.css?1620544223" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620544223" rel="stylesheet">
+    <link href="/css/nucleus.css?1620548254" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620548254" rel="stylesheet">
+    <link href="/css/hybrid.css?1620548254" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620548254" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620548254" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620548254" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620548254" rel="stylesheet">
+    <link href="/css/theme.css?1620548254" rel="stylesheet">
+    <link href="/css/tabs.css?1620548254" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620548254" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1620544223" rel="stylesheet">
+    <link href="/css/theme-blue.css?1620548254" rel="stylesheet">
     
-    <link href="/styles/added.css?1620544223" rel="stylesheet">
+    <link href="/styles/added.css?1620548254" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1620544223"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620548254"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620544223"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620544223"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620548254"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620548254"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620544223"></script>
+<script type="text/javascript" src="/js/search.js?1620548254"></script>
 
     
   </div>
@@ -554,29 +554,21 @@ volumes = [&quot;/var/run/docker.sock:/var/run/docker.sock&quot;, &quot;/cache&q
 <ul>
 <li>프로젝트 내에서 다른 프로젝트의 소스를 clone 위한 인증을 위한 ACCESS 값 필요</li>
 </ul>
-<blockquote>
-<p>ACCESS_TOKEN: 사용자 계정에서 생성한 Token 값</p>
-</blockquote>
-<ul>
+<pre><code>&gt; ACCESS_TOKEN: 사용자 계정에서 생성한 Token 값
+</code></pre><ul>
 <li>develop, master 브랜치를 이용시 동일 스크립트를 사용해 처리하기 위해 변수명이 CLUSTER_develop/_master, GCP_PROJECT_develop/_master 형식으로 사용함</li>
 </ul>
-<blockquote>
-<p>CLUSTER_develop: GCP 쿠버네티스 개발 클러스터 명<br>
-CLUSTER_master: GCP 쿠버네티스 스테이지 클러스터 명<br>
-CLUSTER_PRD: GCP 쿠버네티스 운영 클러스터 명</p>
-</blockquote>
-<blockquote>
-<p>GCP_PROJECT_develop: 개발 프로젝트 ID<br>
-GCP_PROJECT_master: 스테이지 프로젝트 ID<br>
-GCP_PROJECT_PRD_ID: 운영 프로젝트 ID</p>
-</blockquote>
-<ul>
+<pre><code>&gt; CLUSTER_develop: GCP 쿠버네티스 개발 클러스터 명  
+&gt; CLUSTER_master: GCP 쿠버네티스 스테이지 클러스터 명  
+&gt; CLUSTER_PRD: GCP 쿠버네티스 운영 클러스터 명
+</code></pre><pre><code>&gt; GCP_PROJECT_develop: 개발 프로젝트 ID  
+&gt; GCP_PROJECT_master: 스테이지 프로젝트 ID  
+&gt; GCP_PROJECT_PRD_ID: 운영 프로젝트 ID  
+</code></pre><ul>
 <li>soanrqube 실패에 따른 파이프라인 중지여부</li>
 </ul>
-<blockquote>
-<p>SONAR_ON_FAIL:  (false: 실패시 멈춤, true: 실패여부에 상관없이 파이프 라인 진행)</p>
-</blockquote>
-</li>
+<pre><code>&gt; SONAR_ON_FAIL:  (false: 실패시 멈춤, true: 실패여부에 상관없이 파이프 라인 진행)
+</code></pre></li>
 </ul>
 <!-- raw HTML omitted -->
 <hr>
@@ -704,19 +696,19 @@ GCP_PROJECT_PRD_ID: 운영 프로젝트 ID</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620544223"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620544223"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620544223"></script>
-    <script src="/js/jquery.sticky.js?1620544223"></script>
-    <script src="/js/featherlight.min.js?1620544223"></script>
-    <script src="/js/highlight.pack.js?1620544223"></script>
+    <script src="/js/clipboard.min.js?1620548254"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620548254"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620548254"></script>
+    <script src="/js/jquery.sticky.js?1620548254"></script>
+    <script src="/js/featherlight.min.js?1620548254"></script>
+    <script src="/js/highlight.pack.js?1620548254"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620544223"></script>
-    <script src="/js/learn.js?1620544223"></script>
-    <script src="/js/hugo-learn.js?1620544223"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620548254"></script>
+    <script src="/js/learn.js?1620548254"></script>
+    <script src="/js/hugo-learn.js?1620548254"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620544223"></script>
+            <script src="/mermaid/mermaid.js?1620548254"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
