@@ -12,8 +12,6 @@ img[src$='#center'] {
     font-size: 90%;
 }
 
-
-
 #body img, #body .video-container {
     margin-top: 2rem;
     margin-left: auto;
@@ -21,4 +19,8 @@ img[src$='#center'] {
     margin-right: auto;
     display: block;
     text-align: center;
+}
+
+blockquote {
+    border-left: 5px solid #78b5de;
 }
