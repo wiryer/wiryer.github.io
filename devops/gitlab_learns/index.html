@@ -12,22 +12,22 @@
     <title>3. Gitlab 구축 연습 - It&#39;s a Wonderful Life</title>
 
     
-    <link href="/css/nucleus.css?1620524340" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1620524340" rel="stylesheet">
-    <link href="/css/hybrid.css?1620524340" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1620524340" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1620524340" rel="stylesheet">
-    <link href="/css/auto-complete.css?1620524340" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1620524340" rel="stylesheet">
-    <link href="/css/theme.css?1620524340" rel="stylesheet">
-    <link href="/css/tabs.css?1620524340" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1620524340" rel="stylesheet">
+    <link href="/css/nucleus.css?1620540246" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1620540246" rel="stylesheet">
+    <link href="/css/hybrid.css?1620540246" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1620540246" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1620540246" rel="stylesheet">
+    <link href="/css/auto-complete.css?1620540246" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1620540246" rel="stylesheet">
+    <link href="/css/theme.css?1620540246" rel="stylesheet">
+    <link href="/css/tabs.css?1620540246" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1620540246" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1620524340" rel="stylesheet">
+    <link href="/css/theme-blue.css?1620540246" rel="stylesheet">
     
-    <link href="/styles/added.css?1620524340" rel="stylesheet">
+    <link href="/styles/added.css?1620540246" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1620524340"></script>
+    <script src="/js/jquery-3.3.1.min.js?1620540246"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1620524340"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1620524340"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1620540246"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1620540246"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/wiryer.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1620524340"></script>
+<script type="text/javascript" src="/js/search.js?1620540246"></script>
 
     
   </div>
@@ -323,7 +323,10 @@
 <pre><code>eks]# terraform init
 eks]# terraform plan -var-file=eks.tfvars
 eks]# terraform apply -auto-approve -var-file=eks.tfvars
-</code></pre><!-- raw HTML omitted -->
+</code></pre><ul>
+<li>AWS Console &ldquo;EKS&rdquo; 검색 후 Amazon EKS &gt; Clusters &gt; cds-eks-cls 생성 확인 및 &ldquo;cds-eks-cls&rdquo; 클릭 후 두개의 Node가 Ready 상태임을 확인</li>
+</ul>
+<!-- raw HTML omitted -->
 <h3 id="gitalb-서버-생성">[Gitalb 서버 생성]</h3>
 <ul>
 <li>Gitalb 서버 생성 (생성 후 접속까지는 10분안팎 소요)</li>
@@ -340,9 +343,10 @@ gitlab]# terraform apply -auto-approve -var-file=gitlab.tfvars
 # alias eksctl=&quot;eksctl --profile cds-archi&quot; 
 # eksctl create iamidentitymapping --cluster $CLUSTER_NAME --arn arn:aws:iam::$ACCOUNT_ID:role/gitlab-runner-role --group system:masters --username system:node:{{EC2PrivateDNSName}}
 </code></pre><ul>
-<li>hosts 파일 변경:  &lt;gitlab 서버의 public IP&gt; cds.gitlab-share.com
-<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+<li>hosts 파일 변경:  &lt;gitlab 서버의 public IP&gt; cds.gitlab-share.com</li>
+<li><a href="http://cds.gitlab-share.com">http://cds.gitlab-share.com</a> 에 접속(설치 후 10분 안팎 소요)</li>
 </ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h3 id="gitalb-runner-서버-생성-및-연동">[Gitalb-Runner 서버 생성 및 연동]</h3>
 <ul>
 <li>gitlab 패스워드 설정 후 token 값 복사(gitlab-runner 연동에 필요)
@@ -351,13 +355,17 @@ gitlab]# terraform apply -auto-approve -var-file=gitlab.tfvars
 <pre><code>gitlab_runner]# terraform init
 gitlab_runner]# terraform plan -var-file=runner.tfvars
 gitlab_runner]# terraform apply -auto-approve -var-file=runner.tfvars
+var.gitlab_registration_token
+  The Gitlab Admin: Admin area -&gt; Overview -&gt; Runners -&gt; Set up Shared Runner manually -&gt; Grab token from here
+
+  Enter a value: &lt;Gitlab에서 복사한 토큰 값 입력&gt;
 </code></pre><ul>
-<li>terraform 실행 완료 후 3~5분정도 Admin area -&gt; Overview -&gt; Runners 에 추가된 항목을 볼 수 있음.<br>
+<li><em>terraform 실행 완료 후 3~5분정도 Admin area -&gt; Overview -&gt; Runners 에 추가된 항목을 볼 수 있음</em>
 <!-- raw HTML omitted --></li>
 </ul>
 <h3 id="sample-프로젝트-추가maven">[Sample 프로젝트 추가(Maven)]</h3>
 <ul>
-<li>sample 그룹에 springmusic 프로젝트 추가</li>
+<li>sample 그룹 생성 후 sample 그룹에 springmusic 프로젝트 추가</li>
 <li>springmusic 프로그램 push</li>
 <li>springmusic 프로젝트&gt; CI/CD &gt; Pipelines 에서 확인</li>
 <li>처음 빌드시 maven dependencies download로 인해 수분 소요
@@ -487,19 +495,19 @@ gitlab_runner]# terraform apply -auto-approve -var-file=runner.tfvars
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1620524340"></script>
-    <script src="/js/perfect-scrollbar.min.js?1620524340"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1620524340"></script>
-    <script src="/js/jquery.sticky.js?1620524340"></script>
-    <script src="/js/featherlight.min.js?1620524340"></script>
-    <script src="/js/highlight.pack.js?1620524340"></script>
+    <script src="/js/clipboard.min.js?1620540246"></script>
+    <script src="/js/perfect-scrollbar.min.js?1620540246"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1620540246"></script>
+    <script src="/js/jquery.sticky.js?1620540246"></script>
+    <script src="/js/featherlight.min.js?1620540246"></script>
+    <script src="/js/highlight.pack.js?1620540246"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1620524340"></script>
-    <script src="/js/learn.js?1620524340"></script>
-    <script src="/js/hugo-learn.js?1620524340"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1620540246"></script>
+    <script src="/js/learn.js?1620540246"></script>
+    <script src="/js/hugo-learn.js?1620540246"></script>
     
         
-            <script src="/mermaid/mermaid.js?1620524340"></script>
+            <script src="/mermaid/mermaid.js?1620540246"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
