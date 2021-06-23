@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on It&#39;s a Wonderful Life</title>
+    <link>http://wiryer.github.io/aws/</link>
+    <description>Recent content in AWS on It&#39;s a Wonderful Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 29 Apr 2021 22:02:13 +0900</lastBuildDate><atom:link href="http://wiryer.github.io/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4. API Gateway - Private Rest API</title>
+      <link>http://wiryer.github.io/aws/apigateway/</link>
+      <pubDate>Mon, 22 Mar 2021 22:13:21 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/aws/apigateway/</guid>
+      <description> VPC Endpoint  [설치]   VPC Endpoint 설치(생략)
+  API Gateway 설치 - Rest API private
+   생략  [URL 범위 확인]  URL TYPE   A.	API Gateway + Endpoint Association URL  https://{rest-api-id}-{vpce-id}.execute-api.{region}.amazonaws.com/{stage}   B.	Private URL  https://{rest-api-id}.execute-api.ap-northeast-2.amazonaws.com   C.	Public URL  https://vpce-0f0b6d8aa3e07b48d-0xb7zz1d.execute-api.ap-northeast-2.vpce.amazonaws.com    HEADER 옵션   -H &amp;lsquo;x-apigw-api-id:{rest-api-id}&amp;rsquo; -H &amp;lsquo;HOST: {rest-api-id}.execute-api.ap-northeast-2.amazonaws.com&amp;rsquo;     URL Type HEADER Endpoint VPC Other VPC Inside POD(Node VPC )     A Type O 403 Forbidden 403 Forbidden 403 Forbidden    X 200 OK 200 OK 200 OK   B Type O 200 OK Could not resolve host 200 OK    X 200 OK Could not resolve host 200 OK   C Type O 200 OK 200 OK 200 OK    X 403 Forbidden 403 Forbidden 403 Forbidden     </description>
+    </item>
+    
+  </channel>
+</rss>
