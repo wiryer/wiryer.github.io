@@ -8,6 +8,15 @@
     <language>ko-kr</language>
     <lastBuildDate>Thu, 29 Apr 2021 22:02:13 +0900</lastBuildDate><atom:link href="http://wiryer.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>5. EFS PVC</title>
+      <link>http://wiryer.github.io/aws/efs/</link>
+      <pubDate>Wed, 23 Jun 2021 17:58:21 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/aws/efs/</guid>
+      <description>EFS 설치  [설치]  EFS 생성(AWS Console)   Elatstic Files System 서비스 접속  Create EFS : VPC 선택 후 자동으로 AZ 선택. 현재 생성된 EKS 내에서 접속하도록 EKS Subent 으로 수정: Pod 들이 실행되는 Secondary Subnet 으로 설정 Security Group 수정  **NFS Port(2049)**를 추가하고, EKS Security Group 을 Source로 선택해서, EKS pod들이 접근 할 수 있도록 한다.      efs provisioner deployment 생성   EKS 에서 EFS 를 사용하기 위해서 중간에 provisioner를 만들어 EFS와 연동한다.</description>
+    </item>
+    
+    <item>
       <title>1. Gitlab/Gitlab-Runner</title>
       <link>http://wiryer.github.io/devops/gitlab/</link>
       <pubDate>Thu, 29 Apr 2021 22:13:21 +0900</pubDate>
@@ -57,7 +66,7 @@ A. 단일어플리케이션 이점: 동일 호스트를 사용하면서 가시�
       <guid>http://wiryer.github.io/aws/apigateway/</guid>
       <description> VPC Endpoint  [설치]   VPC Endpoint 설치(생략)
   API Gateway 설치 - Rest API private
-   생략  [URL 범위 확인]  URL TYPE   A.	API Gateway + Endpoint Association URL  https://{rest-api-id}-{vpce-id}.execute-api.{region}.amazonaws.com/{stage}   B.	Private URL  https://{rest-api-id}.execute-api.ap-northeast-2.amazonaws.com   C.	Public URL  https://vpce-0f0b6d8aa3e07b48d-0xb7zz1d.execute-api.ap-northeast-2.vpce.amazonaws.com    HEADER 옵션   -H &amp;lsquo;x-apigw-api-id:{rest-api-id}&amp;rsquo; -H &amp;lsquo;HOST: {rest-api-id}.execute-api.ap-northeast-2.amazonaws.com&amp;rsquo;     URL Type HEADER Endpoint VPC Other VPC Inside POD(Node VPC )     A Type O 403 Forbidden 403 Forbidden 403 Forbidden    X 200 OK 200 OK 200 OK   B Type O 200 OK Could not resolve host 200 OK    X 200 OK Could not resolve host 200 OK   C Type O 200 OK 200 OK 200 OK    X 403 Forbidden 403 Forbidden 403 Forbidden     </description>
+   생략  [URL 범위 확인]  URL TYPE   A Type.	API Gateway + Endpoint Association URL  https://{rest-api-id}-{vpce-id}.execute-api.{region}.amazonaws.com/{stage}   B Type.	Private URL  https://{rest-api-id}.execute-api.ap-northeast-2.amazonaws.com   C Type.	Public URL  https://vpce-0f0b6d8aa3e07b48d-0xb7zz1d.execute-api.ap-northeast-2.vpce.amazonaws.com    HEADER 옵션   -H &amp;lsquo;x-apigw-api-id:{rest-api-id}&amp;rsquo; -H &amp;lsquo;HOST: {rest-api-id}.execute-api.ap-northeast-2.amazonaws.com&amp;rsquo;     URL Type HEADER Endpoint VPC Other VPC Inside POD(Node VPC )     A Type O 403 Forbidden 403 Forbidden 403 Forbidden    X 200 OK 200 OK 200 OK   B Type O 200 OK Could not resolve host 200 OK    X 200 OK Could not resolve host 200 OK   C Type O 200 OK 200 OK 200 OK    X 403 Forbidden 403 Forbidden 403 Forbidden     </description>
     </item>
     
   </channel>

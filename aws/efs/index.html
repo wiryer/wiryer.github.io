@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>AWS - It&#39;s a Wonderful Life</title>
+    <title>5. EFS PVC - It&#39;s a Wonderful Life</title>
 
     
     <link href="/css/nucleus.css?1624494958" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/aws/">
+  <body class="" data-url="/aws/efs/">
     <nav id="sidebar" class="">
 
 
@@ -83,7 +83,7 @@
     
     <li data-nav-id="/aws/" title="AWS" class="dd-item
         parent
-        active
+        
         
         ">
       <a href="/aws/">
@@ -108,7 +108,7 @@
  
   
     
-      <li data-nav-id="/aws/efs/" title="5. EFS PVC" class="dd-item ">
+      <li data-nav-id="/aws/efs/" title="5. EFS PVC" class="dd-item active">
         <a href="/aws/efs/">
         5. EFS PVC
         
@@ -306,14 +306,22 @@
                   <span class="links">
                  
                  
-                   AWS
+                   5. EFS PVC
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#efs-설치">EFS 설치</a>
+      <ul>
+        <li><a href="#설치">[설치]</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -329,20 +337,54 @@
           
             <h1>
               
-              AWS
+              5. EFS PVC
             </h1>
           
 
         
 
 
+<blockquote>
+<h2 id="efs-설치">EFS 설치</h2>
+</blockquote>
+<h3 id="설치">[설치]</h3>
+<ol>
+<li>EFS 생성(AWS Console)</li>
+</ol>
+<ul>
+<li>Elatstic Files System 서비스 접속
+<ul>
+<li>Create EFS : VPC 선택 후 자동으로 AZ 선택.</li>
+<li>현재 생성된 EKS 내에서 접속하도록  EKS Subent 으로 수정: Pod 들이 실행되는 Secondary Subnet 으로 설정</li>
+<li>Security Group 수정
+<ul>
+<li>**NFS Port(2049)**를 추가하고, <strong>EKS Security Group</strong> 을 Source로 선택해서, EKS pod들이 접근 할 수 있도록 한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>efs provisioner deployment 생성</li>
+</ol>
+<ul>
+<li>EKS 에서 EFS 를 사용하기 위해서 중간에 provisioner를 만들어 EFS와 연동한다.</li>
+</ul>
+<ol start="3">
+<li>RBAC (권한설정)</li>
+</ol>
+<ul>
+<li></li>
+</ul>
+<ol start="4">
+<li>storageclass 생성</li>
+</ol>
+<ul>
+<li></li>
+</ul>
 
-	
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -391,8 +433,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -409,6 +449,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -525,3 +568,4 @@
 
   </body>
 </html>
+
