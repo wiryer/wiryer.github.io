@@ -27,5 +27,14 @@
    생략  [URL 범위 확인]  URL TYPE   A Type.	API Gateway + Endpoint Association URL  https://{rest-api-id}-{vpce-id}.execute-api.{region}.amazonaws.com/{stage}   B Type.	Private URL  https://{rest-api-id}.execute-api.ap-northeast-2.amazonaws.com   C Type.	Public URL  https://vpce-0f0b6d8aa3e07b48d-0xb7zz1d.execute-api.ap-northeast-2.vpce.amazonaws.com    HEADER 옵션   -H &amp;lsquo;x-apigw-api-id:{rest-api-id}&amp;rsquo; -H &amp;lsquo;HOST: {rest-api-id}.execute-api.ap-northeast-2.amazonaws.com&amp;rsquo;     URL Type HEADER Endpoint VPC Other VPC Inside POD(Node VPC )     A Type O 403 Forbidden 403 Forbidden 403 Forbidden    X 200 OK 200 OK 200 OK   B Type O 200 OK Could not resolve host 200 OK    X 200 OK Could not resolve host 200 OK   C Type O 200 OK 200 OK 200 OK    X 403 Forbidden 403 Forbidden 403 Forbidden     </description>
     </item>
     
+    <item>
+      <title>6. Account</title>
+      <link>http://wiryer.github.io/aws/account/</link>
+      <pubDate>Mon, 22 Mar 2021 22:13:21 +0900</pubDate>
+      
+      <guid>http://wiryer.github.io/aws/account/</guid>
+      <description>VPC 별 Account 분리  [설치]  IAM User Credential : Multi Account   EKS 구성을 위한 적절한 AWS 권한이 있는 IAM User Credential이 필요하다. &amp;lt;&amp;ndash;profile&amp;gt; 로 Account를 구분     Account Account No Remark     shared 0000000000 KMS, cross-account   develop 1111111111 ECR   product 2222222222     1. 개요 1.1. 목적 본 문서는 폐쇄망(NAT가 없는 환경)에서 EKS를 구성하기 위하 방법을 기술한다.</description>
+    </item>
+    
   </channel>
 </rss>
